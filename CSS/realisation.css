@@ -73,6 +73,7 @@ html{
 }
 
 
+
 .date_note {
     width: 100%;
     display: flex;
@@ -106,7 +107,7 @@ html{
     flex-wrap: wrap;
     padding: 30px;
     height: 75%;
-    overflow: auto;
+    overflow:auto;
     z-index: 10;
     border : solid 50px rgb(230, 230, 230)
 }
@@ -115,6 +116,10 @@ html{
 .detail_projet{
     display : flex;
     justify-content: space-around;
+}
+
+.liste{
+    list-style: none;
 }
 
 

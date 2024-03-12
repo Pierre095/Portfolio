@@ -47,14 +47,57 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_1') {
+    if (arg === 'projet_sokoban') {
+        titre_projet_detail.innerHTML = `Sokoban`
+
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Approfondissement en<span class="mot_speciaux"> JavaScript</span></li>
+        <li><i class="fa-solid fa-check"></i> Gestion d'une <span class="mot_speciaux">base de données</span></li>`
+
+        image_detail.src = `IMG/realisation/sokoban/PJ.gif`
+        titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
+        paragraphe_detail.innerHTML = `
+        Le projet Sokoban est un jeu de puzzle où le joueur doit pousser des blocs vers des emplacements cibles sur un plateau de jeu. Le jeu se caractérise par sa simplicité de 
+        conception mais offre un défi de réflexion profond. Le joueur contrôle un personnage dans un labyrinthe composé de murs, de blocs (ou caisses) et de destinations spécifiques
+        où les blocs doivent être placés. L'objectif est de positionner tous les blocs sur ces destinations avec le nombre minimum de mouvements et de poussées. Sokoban met l'accent 
+        sur la planification stratégique et la résolution de problèmes spatiaux, chaque niveau étant un puzzle statique avec une solution spécifique.`
+        image_detail2.src = `IMG/realisation/billeterie/fonction.png`
+        titre_detail2.innerHTML = `Calculs du trajet et du tarif`
+        paragraphe_detail2.innerHTML = `Voici une des fonctionnalités permettant de calculer la distance entre deux stations choisis par l'utilisateur, puis le prix en fonction de la distance du trajet,
+        et enfin le coût total du trajet avec le nombre de billets saisis précédement`
+        image_detail3.src = `IMG/realisation/billeterie/resultat.png`
+        titre_detail3.innerHTML = `Format de la Billeterie`
+        paragraphe_detail3.innerHTML = `Voici donc le format de la billeterie, la demande des stations est simplifier afin de faciliter la saisi pour l'utilisateur, 
+        et à la fin on affiche le détail du billet de metro, à noter qu'il s'agit d'une vrai ligne de metro au japon, et des vrais tarifs et zones tarifaire.`
+        image_detail4.src = ``
+        titre_detail4.innerHTML = ``
+        paragraphe_detail4.innerHTML = ``
+        image_detail5.src = ``
+        titre_detail5.innerHTML = ``
+        paragraphe_detail5.innerHTML = ``
+        image_detail6.src = ``
+        titre_detail6.innerHTML = ``
+        paragraphe_detail6.innerHTML = ``
+        image_detail7.src = ``
+        titre_detail7.innerHTML = ``
+        paragraphe_detail7.innerHTML = ``
+        image_detail8.src = ``
+        titre_detail8.innerHTML = ``
+        paragraphe_detail8.innerHTML = ``
+
+        telechargement.innerHTML = `<a class="button" target="blink" href="index_jeu.html">Jouer a Sokoban</a>`
+    }
+
+    if (arg === 'projet_nozama') {
         titre_projet_detail.innerHTML = `NOZAMA`
 
 
-        liste_informations.innerHTML = `<li>Projet fait à <span class="mot_speciaux">2</span></li>
-        <li>Durée : <span class="mot_speciaux">2 mois</span></li>
-        <li>Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
-        liste_competences.innerHTML = `<li><span class="mot_speciaux">Autonomie</span></li>`
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-user-group"></i> Projet fait à <span class="mot_speciaux">2</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Autonomie</span></li>`
 
         image_detail.src = `IMG/realisation/nozama/logo_nozama_sans_fond_noir.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
@@ -89,14 +132,14 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_2') {
+    if (arg === 'projet_RTC') {
         titre_projet_detail.innerHTML = `Rugby Tropical Cup`
 
-        liste_informations.innerHTML = `<li>Projet fait tout <span class="mot_speciaux">seul</span></li>
-        <li>Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li>Projet stocké sur <span class="mot_speciaux">git hub</span></li>`
-        liste_competences.innerHTML = `<li>Autonomie</li>
-        <li>Création d'<span class="mot_speciaux">API</span></li>`
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Autonomie</li>
+        <li><i class="fa-solid fa-check"></i> Création d'<span class="mot_speciaux">API</span></li>`
 
         image_detail.src = `IMG/realisation/rugby/rugby.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
@@ -153,14 +196,14 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_3') {
+    if (arg === 'projet_croquette') {
         titre_projet_detail.innerHTML = `Team Croquette`
 
-        liste_informations.innerHTML = `<li>Projet fait en <span class="mot_speciaux">Équipe</span> de <span class="mot_speciaux">3</span></li>
-        <li>Durée : <span class="mot_speciaux">2 mois</span></li>
-        <li>Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
-        liste_competences.innerHTML = `<li>Travail en <span class="mot_speciaux">Équipe<span class="mot_speciaux"></li>
-        <li>Gestion d'une <span class="mot_speciaux">API<span class="mot_speciaux"></li>`
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-people-group"></i> Projet fait en <span class="mot_speciaux">Équipe</span> de <span class="mot_speciaux">3</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES"> git lab</a></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Travail en <span class="mot_speciaux">Équipe<span class="mot_speciaux"></li>
+        <li><i class="fa-solid fa-check"></i> Gestion d'une <span class="mot_speciaux">API<span class="mot_speciaux"></li>`
 
         image_detail.src = `IMG/realisation/teamcroquette/logo_teamcroquette_sans_fond_noir.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
@@ -200,14 +243,14 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_4') {
-        titre_projet_detail.innerHTML = `Textadventure`
+    if (arg === 'projet_adventure') {
+        titre_projet_detail.innerHTML = `Text adventure`
 
-        liste_informations.innerHTML = `<li>Projet fait <span class="mot_speciaux">seul</span></li>
-        <li>Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li>Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
-        liste_competences.innerHTML = `<li>Découverte des <span class="mot_speciaux">boucles</span> (if else, for, while)</li>
-        <li>Gestion de <span class="mot_speciaux">fonctions</span></li>`
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Découverte des <span class="mot_speciaux">boucles</span> (if else, for, while)</li>
+        <li><i class="fa-solid fa-check"></i> Gestion de <span class="mot_speciaux">fonctions</span></li>`
 
         image_detail.src = `IMG/realisation/textadventure/textadventure.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
@@ -249,14 +292,14 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_5') {
+    if (arg === 'projet_billeterie') {
         titre_projet_detail.innerHTML = `Billeterie de Fukuokakuko`
 
-        liste_informations.innerHTML = `<li>Projet fait <span class="mot_speciaux">seul</span></li>
-        <li>Durée : <span class="mot_speciaux">2 semaine</span></li>
-        <li>Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
-        liste_competences.innerHTML = `<li>Calcul avec des <span class="mot_speciaux">variables</span></li>
-        <li>Organisation d'un <span class="mot_speciaux">code</span></li>`
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 semaines</span></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Calcul avec des <span class="mot_speciaux">variables</span></li>
+        <li><i class="fa-solid fa-check"></i> Organisation d'un <span class="mot_speciaux">code</span></li>`
 
         image_detail.src = `IMG/realisation/billeterie/billeterie.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
@@ -295,13 +338,13 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_6') {
+    if (arg === 'projet_tinycar') {
         titre_projet_detail.innerHTML = `Tinycar`
 
-        liste_informations.innerHTML = `<li>Projet fait <span class="mot_speciaux">seul</span></li>
-        <li>Durée : <span class="mot_speciaux">2 semaine</span></li>
-        <li>Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
-        liste_competences.innerHTML = `Pas disponible`
+        liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 semaines</span></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        liste_competences.innerHTML = `<i class="fa-solid fa-check"></i> Pas disponible`
 
         image_detail.src = `IMG/realisation/tinycar/tinycar.png`
         titre_detail.innerHTML = `titre`
@@ -382,14 +425,14 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_7') {
+    if (arg === 'projet_ticket') {
         titre_projet_detail.innerHTML = `Résolution d'un ticket`
 
         liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">X</span>...</li>
         <li>Nombre de ticket <span class="mot_speciaux">créé</span> par semaine : </li>
         <li>Nombre de ticket <span class="mot_speciaux">fermé</span> par semaine : </li>`
-        liste_competences.innerHTML = `<li>Esprit d'<span class="mot_speciaux">analyse</span></li>
-        <li><span class="mot_speciaux">Relation client</span></li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
+        <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
 
         image_detail.src = `IMG/realisation/ticket/desk.jpg`
         titre_detail.innerHTML = `Qu'est-ce qu'un <span class="mot_important">Ticket</span> ?`
