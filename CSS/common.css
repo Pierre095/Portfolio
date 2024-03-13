@@ -161,7 +161,6 @@ html {
     filter: blur(5px);
     top: -10px;
     left: -10px;
-    /* margin-bottom: 10%; */
     width: 102%;
     height: 102%;
     z-index: -1;
@@ -532,19 +531,6 @@ a {
 
     .menu .menu-titre .lien-mobile a:active {
         color: rgb(114, 114, 114);
-    }
-
-
-    .background-image {
-        position: absolute;
-        filter: blur(5px);
-        top: -10px;
-        left: -10px;
-        width: 102%;
-        height: 102%;
-        z-index: -1;
-        object-fit:none;
-        overflow-x: hidden;
     }
 
     .typing {
