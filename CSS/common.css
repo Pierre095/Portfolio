@@ -97,6 +97,13 @@ html {
     }
 }
 
+@media screen and (max-width: 765px) {
+    .espace {
+        background-color: #0a0a0a3a;
+        margin-top: 200%;
+    }
+}
+
 
 
 .logo {
@@ -485,7 +492,8 @@ a {
         height: 70px;
         background-color: transparent;
         display: flex;
-        justify-content: center;
+        justify-content: left;
+        margin-right: 40%;
         align-items: center;
         gap: 10%;
         list-style: none;
@@ -541,24 +549,28 @@ a {
 
     }
 
+    .typing {
+        display: none;
+    }
+
 
     .projet_details_show {
         position: fixed;
         background: rgb(230, 230, 230);
         border-radius: 10px;
         box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);
-        display: wrap;
-        flex-wrap: wrap;
         padding: 0px;
         height: 75%;
-        overflow:auto;
         z-index: 10;
-        border : solid 50px rgb(230, 230, 230)
+        width : 80%;
+        margin : 3%;
+        border : solid 20px rgb(230, 230, 230)
     }
 
     .detail_projet{
         display : flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .liste{
