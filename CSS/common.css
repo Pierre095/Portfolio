@@ -533,8 +533,20 @@ a {
         color: rgb(114, 114, 114);
     }
 
+
     .typing {
-        display: none;
+        margin-top: 300px;
+        width: 97%;
     }
+
+    .typing_effect {
+        animation-name: none;
+        overflow: auto;
+        white-space: wrap;
+        font-size: medium;
+        text-align: center;
+    }
+
+    
 
 }
