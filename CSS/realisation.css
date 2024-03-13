@@ -117,7 +117,21 @@ html{
     justify-content: space-around;
 }
 
-.liste{
+.detail_projet .informations .titre{
+    text-align: center;
+}
+
+.detail_projet .competences .titre{
+    text-align: center;
+}
+
+.detail_projet .informations .liste{
+    text-align: left;
+    list-style: none;
+}
+
+.detail_projet .competences .liste{
+    text-align: left;
     list-style: none;
 }
 
@@ -126,6 +140,7 @@ html{
 .titre_projet_detail{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -314,6 +329,10 @@ html{
         z-index: 10;
         width : 83%;
         margin : 3%;
+    }
+
+    .titre_projet_detail{
+        margin-top : 65px;
     }
 
     .detail_projet{
