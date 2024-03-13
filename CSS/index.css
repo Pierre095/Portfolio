@@ -260,6 +260,10 @@ html {
     align-items: center;
 }
 
+.scolaire-pro .titre{
+    text-align: center;
+}
+
 .parcours {
     display: flex;
     flex-direction: column;
@@ -267,12 +271,6 @@ html {
     gap: 5%;
     width : 700px;
 }
-
-/* @media screen and (max-width: 1640px) {
-    .parcours {
-        width : 450px;
-    }
-} */
 
 .parcour {
     cursor: pointer;
