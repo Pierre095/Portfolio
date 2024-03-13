@@ -12,8 +12,13 @@ setTimeout(() => {
 
 function affiche_detail(arg) {
 
-    let titre_projet_detail = document.querySelector('.titre_projet_detail');
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflow = 'hidden';
+    
+    
+    
 
+    let titre_projet_detail = document.querySelector('.titre_projet_detail');
     let liste_informations = document.querySelector('.detail_projet .informations .liste');
     let liste_competences = document.querySelector('.detail_projet .competences .liste');
     let telechargement = document.querySelector('.projet_details_hide .file');
@@ -489,10 +494,14 @@ function affiche_detail(arg) {
 }
 
 function retour() {
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflowY = 'auto';
     const clic_projet = document.querySelector('.projet_details_show');
     const fleche_retour = document.querySelector('.fleche_retour_show');
     clic_projet.classList.add('projet_details_hide');
     clic_projet.classList.remove('projet_details_show');
     fleche_retour.classList.add('fleche_retour_hide');
     fleche_retour.classList.remove('fleche_retour_show');
+
+
 }

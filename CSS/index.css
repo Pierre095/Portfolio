@@ -9,7 +9,6 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    bottom: -100%;
 }
 
 .presentation_moi {
@@ -28,7 +27,7 @@ html {
 }
 
 .presentation_moi .text_presentation .paragraphe {
-    width: 60%;
+    width: 80%;
     text-align: justify;
 }
 
@@ -431,4 +430,61 @@ html {
     text-align: left;
     list-style: none;
     padding: 10% 5% 0% 0%;
+}
+
+
+@media screen and (max-width: 765px) {
+
+
+    .photoID {
+        border-radius: 30px;
+        width: 100%;
+    }
+
+
+    .presentation_moi {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 5%;
+    }
+
+    .presentation_moi .text_presentation{
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .presentation_moi .text_presentation .titre{
+        text-align: center;
+    }
+
+    .presentation_moi .text_presentation .paragraphe{
+        width : 100%;
+    }
+    
+    .presentation_moi .text_presentation .cv {
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        position: relative;
+        text-decoration: none;
+        font-size: 115%;
+        transition: all 0.5s ease;
+        padding: 10px;
+        border: solid 2px;
+        border-radius: 10px;
+    
+    }
+
+
+
+    .parcours {
+        width : 300px;
+    }
+
+    .certification {
+        width: 300px;
+    }
 }

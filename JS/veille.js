@@ -52,6 +52,8 @@ function sortArticles(event) {
 
 
 function affiche_detail(arg) {
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflow = 'hidden';
     let image_detail = document.querySelector('.img_paragraphe_detail .image');
     let paragraphe_detail = document.querySelector('.img_paragraphe_detail .paragraphe');
     let titre_detail = document.querySelector('.titre_article_detail');
@@ -142,6 +144,8 @@ function affiche_detail(arg) {
 }
 
 function retour() {
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflowY = 'auto';
     const clic_article = document.querySelector('.article_details_show');
     const fleche_retour = document.querySelector('.fleche_retour_show');
     clic_article.classList.add('article_details_hide');

@@ -12,6 +12,9 @@
 .background .menu .menu-titre .lien a{
     color: rgb(255, 255, 255);
 }
+.background .menu .menu-titre .lien-mobile a{
+    color: rgb(255, 255, 255);
+}
 
 .background .menu .menu-titre .lien a:hover {
     color: rgb(229, 233, 2);
@@ -184,7 +187,6 @@
 .projet_details_show{
     background-color: rgb(40, 40, 40);
     box-shadow: 3px 3px 3px 3px rgb(55, 55, 55);
-    border : solid 50px rgb(40, 40, 40);
 }
 
 .fa-brands{
@@ -258,6 +260,22 @@
 .article_details_show{
     background-color: rgb(40, 40, 40);
     box-shadow: 3px 3px 3px 3px rgb(55, 55, 55);
+}
+
+.article_details_show .file .button {
+    color: rgb(255, 255, 255);
+}
+
+.article_details_show .file .button:before{
+    background-color: rgb(255, 255, 255);
+}
+.article_details_show .file .button:hover{
+    color:rgb(0, 0, 0); 
+}
+
+.article_details_show .file .button:active{
+    color: rgb(114, 114, 114);
+    border : none;
 }
 
 
