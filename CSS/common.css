@@ -442,7 +442,6 @@ a {
 
     html {
         Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-        overflow-x: hidden;
     }
 
     .background {
@@ -452,6 +451,7 @@ a {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        overflow-x :hidden;
 
     }
 

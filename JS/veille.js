@@ -10,7 +10,7 @@ setTimeout(() => {
 
 sortArticles({ target: { value: "note" } })
 
-//Fonction qui servira à trié par note date alphabet les article de veille
+//Fonction qui servira à trié par note, date, alphabet, les article de veille
 
 
 
@@ -55,15 +55,19 @@ function affiche_detail(arg) {
     let image_detail = document.querySelector('.img_paragraphe_detail .image');
     let paragraphe_detail = document.querySelector('.img_paragraphe_detail .paragraphe');
     let titre_detail = document.querySelector('.titre_article_detail');
+    let telechargement = document.querySelector('.article_details_hide .file');
+
 
     if (arg === 'article_1') {
         console.log('yes')
-        titre_detail.innerHTML = `<a target="blink" href="https://www.bfmtv.com/crypto/blockchain/cryptomonnaies-societe-generale-emet-sa-premiere-obligation-verte-numerique-sur-ethereum_AV-202312040529.html">CRYPTOMONNAIES: SOCIÉTÉ GÉNÉRALE ÉMET SA PREMIÈRE OBLIGATION VERTE NUMÉRIQUE SUR ETHEREUM</a>`
+        titre_detail.innerHTML = `<p>CRYPTOMONNAIES: SOCIÉTÉ GÉNÉRALE ÉMET SA PREMIÈRE OBLIGATION VERTE NUMÉRIQUE SUR ETHEREUM</p>`
         image_detail.src = `IMG/veille/image_article_1.png`
         paragraphe_detail.innerHTML = `
         Les banques explorent une nouvelle technologie appelée blockchain, qui est comme un grand livre numérique sécurisé.
         Plutôt que de l'utiliser uniquement pour les cryptomonnaies, elles créent des jetons numériques pour représenter des choses comme des obligations 
         (sorte de prêts financiers).`
+        telechargement.innerHTML = `<a class="button" target="blank" href="https://www.bfmtv.com/crypto/blockchain/cryptomonnaies-societe-generale-emet-sa-premiere-obligation-verte-numerique-sur-ethereum_AV-202312040529.html"">Visiter le site</a>`
+
     }
 
     if (arg === 'article_2') {

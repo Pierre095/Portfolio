@@ -52,7 +52,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Approfondissement en<span class="mot_speciaux"> JavaScript</span></li>
         <li><i class="fa-solid fa-check"></i> Gestion d'une <span class="mot_speciaux">base de données</span></li>`
 
