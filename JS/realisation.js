@@ -14,6 +14,8 @@ function affiche_detail(arg) {
 
     const noscroll = document.querySelector('html');
     noscroll.style.overflow = 'hidden';
+
+
     
     
     
@@ -94,16 +96,16 @@ function affiche_detail(arg) {
         paragraphe_detail.innerHTML = `
         Le projet Sokoban est un jeu de puzzle où le joueur doit pousser des blocs vers des emplacements cibles sur un plateau de jeu. Le jeu se caractérise par sa simplicité de 
         conception mais offre un défi de réflexion profond. Le joueur contrôle un personnage dans un labyrinthe composé de murs, de blocs (ou caisses) et de destinations spécifiques
-        où les blocs doivent être placés. L'objectif est de positionner tous les blocs sur ces destinations avec le nombre minimum de mouvements et de poussées. Sokoban met l'accent 
+        où les blocs doivent être placés. L'objectif est d'atteindre l'arrivé sans dépassé le nombre de coup autorisé'. Sokoban met l'accent 
         sur la planification stratégique et la résolution de problèmes spatiaux, chaque niveau étant un puzzle statique avec une solution spécifique.`
-        image_detail2.src = `IMG/realisation/billeterie/fonction.png`
-        titre_detail2.innerHTML = `Calculs du trajet et du tarif`
-        paragraphe_detail2.innerHTML = `Voici une des fonctionnalités permettant de calculer la distance entre deux stations choisis par l'utilisateur, puis le prix en fonction de la distance du trajet,
-        et enfin le coût total du trajet avec le nombre de billets saisis précédement`
-        image_detail3.src = `IMG/realisation/billeterie/resultat.png`
-        titre_detail3.innerHTML = `Format de la Billeterie`
-        paragraphe_detail3.innerHTML = `Voici donc le format de la billeterie, la demande des stations est simplifier afin de faciliter la saisi pour l'utilisateur, 
-        et à la fin on affiche le détail du billet de metro, à noter qu'il s'agit d'une vrai ligne de metro au japon, et des vrais tarifs et zones tarifaire.`
+        image_detail2.src = `IMG/realisation/sokoban/jeu.png`
+        titre_detail2.innerHTML = `Présentation d'un niveau`
+        paragraphe_detail2.innerHTML = `Dans ce premier niveau nous pouvons des blocs des squelettes et le diamant qui symbolise l'arrivé. chaque élément a une spécificité,
+        par exemple les blocs ne peuvent pas être déplacé si un autre élément est derrière`
+        image_detail3.src = `IMG/realisation/sokoban/generation_map.png`
+        titre_detail3.innerHTML = `Generation de la map`
+        paragraphe_detail3.innerHTML = `Ici chaques numéro représente un élément particulier, par exmple le 3 représente le personnage, et le 6 le diamant. Avec cette méthode 
+        la création de map devient beaucoup plus simple`
         
         image_detail4.style.display = 'none'
         image_detail5.style.display = 'none'
@@ -1069,6 +1071,8 @@ function affiche_detail(arg) {
 function retour() {
     const noscroll = document.querySelector('html');
     noscroll.style.overflowY = 'auto';
+    const resetscroll = document.querySelector('.projet_details_show');
+    resetscroll.scrollTop = 0;
     const clic_projet = document.querySelector('.projet_details_show');
     const fleche_retour = document.querySelector('.fleche_retour_show');
     clic_projet.classList.add('projet_details_hide');

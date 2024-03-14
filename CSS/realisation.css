@@ -106,7 +106,7 @@ html{
     display: wrap;
     flex-wrap: wrap;
     padding: 30px;
-    height: 75%;
+    height: 80%;
     overflow:auto;
     z-index: 10;
 }
@@ -325,7 +325,7 @@ html{
         border-radius: 10px;
         box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);
         padding: 20px;
-        height: 80%;
+        height: 90%;
         z-index: 10;
         width : 83%;
         margin : 3%;
