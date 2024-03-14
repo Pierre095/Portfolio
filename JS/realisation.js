@@ -53,6 +53,7 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_sokoban') {
+
         image_detail.style.display = ''
         image_detail2.style.display = ''
         image_detail3.style.display = ''
@@ -159,38 +160,45 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-user-group"></i> Projet fait à <span class="mot_speciaux">2</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
-        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <span class="mot_speciaux">git lab</span></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="mot_speciaux" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Autonomie</span></li>`
 
         image_detail.src = `IMG/realisation/nozama/logo_nozama_sans_fond_noir.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
         et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
+        
+        image_detail2.src = `IMG/realisation/nozama/cahier_des_charges.png`
+        titre_detail2.innerHTML = `Cahier des charges`
+        paragraphe_detail2.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
+        et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
+
+        image_detail3.src = `IMG/realisation/nozama/cahier_technique.png`
+        titre_detail3.innerHTML = `Cahier Technique`
+        paragraphe_detail3.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
+        et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
 
 
-        image_detail2.style.display = 'none'
-        image_detail3.style.display = 'none'
+
         image_detail4.style.display = 'none'
         image_detail5.style.display = 'none'
         image_detail6.style.display = 'none'
         image_detail7.style.display = 'none'
         image_detail8.style.display = 'none'
 
-        titre_detail2.style.display = 'none'
-        titre_detail3.style.display = 'none'
         titre_detail4.style.display = 'none'
         titre_detail5.style.display = 'none'
         titre_detail6.style.display = 'none'
         titre_detail7.style.display = 'none'
         titre_detail8.style.display = 'none'
 
-        paragraphe_detail2.style.display = 'none'
-        paragraphe_detail3.style.display = 'none'
         paragraphe_detail4.style.display = 'none'
         paragraphe_detail5.style.display = 'none'
         paragraphe_detail6.style.display = 'none'
         paragraphe_detail7.style.display = 'none'
         paragraphe_detail8.style.display = 'none'
+
+        telechargement.innerHTML = ``
     }
 
 
@@ -640,7 +648,7 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_ticket') {
+    if (arg === 'projet_ticket_reseau') {
 
         image_detail.style.display = ''
         image_detail2.style.display = ''
@@ -669,7 +677,7 @@ function affiche_detail(arg) {
         paragraphe_detail7.style.display = ''
         paragraphe_detail8.style.display = ''
 
-        titre_projet_detail.innerHTML = `Résolution d'un ticket`
+        titre_projet_detail.innerHTML = `Résolution d'un ticket en réseau`
 
         liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">X</span>...</li>
         <li>Nombre de ticket <span class="mot_speciaux">créé</span> par semaine : </li>
@@ -677,11 +685,17 @@ function affiche_detail(arg) {
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
         <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
 
-        image_detail.src = `IMG/realisation/ticket/desk.jpg`
-        titre_detail.innerHTML = `Qu'est-ce qu'un <span class="mot_important">Ticket</span> ?`
-        paragraphe_detail.innerHTML = `Un Ticket est la forme que va prendre une demande ou plainte d'un client, afin quel soit traîté dans les meilleurs conditions, et de façon plus rapide
-        pour notre part nous utilisons la plateforme Zoho Desk qui nous permet d'avoir notre gestion de ticket de façon organisée`
-        image_detail2.src = `IMG/realisation/ticket/creation_ticket.png`
+        image_detail.src = `IMG/realisation/professionnel/desk.jpg`
+        titre_detail.innerHTML = `titre`
+        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+
+        image_detail2.src = `IMG/realisation/professionnel/ticket/creation_ticket.png`
         titre_detail2.innerHTML = `<span class="mot_important">Création</span> d'un ticket`
         paragraphe_detail2.innerHTML = `Afin créer un <span class="mot_important">ticket</span>, deux <span class="mot_important">options</span> sont disponibles :
         <li>Le client peut contacter notre service par <span class="mot_important">téléphone</span>, où des personnes attitrées prennent en charge la demande et rassemblent des 
@@ -691,31 +705,348 @@ function affiche_detail(arg) {
         <span class="mot_important">techniciens.</li>
         <li>le client peut envoyer un <span class="mot_important">e-mail</span>. Ce processus génère un ticket <span class="mot_speciaux">automatiquement</span>
         où toutes les informations sont <span class="mot_speciaux">enregistrées</span> pour commencer le traitement de la demande.</li>`
-        image_detail3.src = `IMG/realisation/ticket/listing_ticket.png`
+
+        image_detail3.src = `IMG/realisation/professionnel/ticket/listing_ticket.png`
         titre_detail3.innerHTML = `<span class="mot_important">Linsting</span> des tickets`
         paragraphe_detail3.innerHTML = `Ici nous voyons tout les tickets en cours, avec le technicien attitré. Il est possible qu'un technicien n'ait plus de tickets a traiter, 
         ou ceux-ci sont en attente de l'interlocuteur, dans ce cas là il va traiter les tickets en surplus attitrés aux autres technicien`
-        image_detail4.src = `IMG/realisation/Ticket/traitement_ticket.png`
+
+        image_detail4.src = `IMG/realisation/professionnel/ticket/reseau/traitement_ticket.png`
         titre_detail4.innerHTML = `<span class="mot_important">Traitement</span> du Ticket`
         paragraphe_detail4.innerHTML = `Lors du traitement de la demande, nous nous penchons sur toutes les potentielles configurations qui 
         entraînent la panne, pour cela nous allons dans un premier temps nous rendre sur notre logiciel metier et accèder au site du client, 
         cela nous donne toute sortes d'information, comme l'état de son réseau, l'état de ses téléphone, etc... En ce qui concerne les demandes de changement
         ou ajout dans la configuration, le traitement est assez rapide car nous savons où aller directement, afin de répondre au besoins du client. `
-        image_detail5.src = `IMG/realisation/ticket/resolution_ticket.png`
+
+        image_detail5.src = `IMG/realisation/professionnel/ticket/reseau/resolution_ticket.png`
         titre_detail5.innerHTML = `La <span class="mot_important">résolution</span> du ticket`
         paragraphe_detail5.innerHTML = `Une fois le problème résolu nous envoyons un message au client pour lui informer que la panne est résolu.
         Il est également courant d'appeler directement le client afin de faire des tests pour s'assurer que tout est de nouveau opérationnel, 
         dans ce cas nous envoyons tout de même un message afin d'avoir une trace écrite en cas de mauvaise fois de la part du client`
 
+
         image_detail6.style.display = 'none'
         image_detail7.style.display = 'none'
         image_detail8.style.display = 'none'
-
 
         titre_detail6.style.display = 'none'
         titre_detail7.style.display = 'none'
         titre_detail8.style.display = 'none'
 
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
+
+        telechargement.innerHTML = ``
+    }
+
+    if (arg === 'projet_conf_firewall') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
+        titre_projet_detail.innerHTML = `Configuration d'un Firewall`
+
+        image_detail.src = `IMG/realisation/professionnel/conf_firewall/sophia.png`
+        titre_detail.innerHTML = `Logiciel Metier`
+        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+        image_detail2.src = `IMG/realisation/professionnel/conf_firewall/firewall.png`
+        titre_detail2.innerHTML = `Logiciel gestion Firewall`
+        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+
+        image_detail3.style.display = 'none'
+        image_detail4.style.display = 'none'
+        image_detail5.style.display = 'none'
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail3.style.display = 'none'
+        titre_detail4.style.display = 'none'
+        titre_detail5.style.display = 'none'
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail3.style.display = 'none'
+        paragraphe_detail4.style.display = 'none'
+        paragraphe_detail5.style.display = 'none'
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
+
+        telechargement.innerHTML = ``
+    }
+
+    if (arg === 'projet_conf_routeur') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
+        titre_projet_detail.innerHTML = `Configuration d'un routeur`
+
+        image_detail.src = `IMG/realisation/professionnel/conf_routeur/sophia.png`
+        titre_detail.innerHTML = `Logiciel Metier`
+        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+        image_detail2.src = `IMG/realisation/professionnel/conf_routeur/winbox.png`
+        titre_detail2.innerHTML = `Logiciel gestion Routeur`
+        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+
+        image_detail3.style.display = 'none'
+        image_detail4.style.display = 'none'
+        image_detail5.style.display = 'none'
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail3.style.display = 'none'
+        titre_detail4.style.display = 'none'
+        titre_detail5.style.display = 'none'
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail3.style.display = 'none'
+        paragraphe_detail4.style.display = 'none'
+        paragraphe_detail5.style.display = 'none'
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
+
+        telechargement.innerHTML = ``
+    }
+
+    if (arg === 'projet_ticket_telephonie') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
+        titre_projet_detail.innerHTML = `Résolution d'un ticket en téléphonie`
+
+        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">X</span>...</li>
+        <li>Nombre de ticket <span class="mot_speciaux">créé</span> par semaine : </li>
+        <li>Nombre de ticket <span class="mot_speciaux">fermé</span> par semaine : </li>`
+        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
+        <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
+
+        image_detail.src = `IMG/realisation/professionnel/desk.jpg`
+        titre_detail.innerHTML = `titre`
+        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+
+        image_detail2.src = `IMG/realisation/professionnel/ticket/creation_ticket.png`
+        titre_detail2.innerHTML = `<span class="mot_important">Création</span> d'un ticket`
+        paragraphe_detail2.innerHTML = `Afin créer un <span class="mot_important">ticket</span>, deux <span class="mot_important">options</span> sont disponibles :
+        <li>Le client peut contacter notre service par <span class="mot_important">téléphone</span>, où des personnes attitrées prennent en charge la demande et rassemblent des 
+        <span class="mot_speciaux">informations</span> pour <span class="mot_speciaux">créer</span> le ticket. Ils notent la <span class="mot_speciaux">raison sociale</span> 
+        du client, le <span class="mot_speciaux">nom</span> du demandeur et ses <span class="mot_speciaux">coordonnées</span>, ainsi que la <span class="mot_speciaux">priorité</span>
+        et le <span class="mot_speciaux">niveau</span> du ticket. Ensuite, dans la <span class="mot_speciaux">description</span>, la demande est détaillée pour les 
+        <span class="mot_important">techniciens.</li>
+        <li>le client peut envoyer un <span class="mot_important">e-mail</span>. Ce processus génère un ticket <span class="mot_speciaux">automatiquement</span>
+        où toutes les informations sont <span class="mot_speciaux">enregistrées</span> pour commencer le traitement de la demande.</li>`
+
+        image_detail3.src = `IMG/realisation/professionnel/ticket/listing_ticket.png`
+        titre_detail3.innerHTML = `<span class="mot_important">Linsting</span> des tickets`
+        paragraphe_detail3.innerHTML = `Ici nous voyons tout les tickets en cours, avec le technicien attitré. Il est possible qu'un technicien n'ait plus de tickets a traiter, 
+        ou ceux-ci sont en attente de l'interlocuteur, dans ce cas là il va traiter les tickets en surplus attitrés aux autres technicien`
+
+        image_detail4.src = `IMG/realisation/professionnel/ticket/telephonie/traitement_ticket.png`
+        titre_detail4.innerHTML = `<span class="mot_important">Traitement</span> du Ticket`
+        paragraphe_detail4.innerHTML = `Lors du traitement de la demande, nous nous penchons sur toutes les potentielles configurations qui 
+        entraînent la panne, pour cela nous allons dans un premier temps nous rendre sur notre logiciel metier et accèder au site du client, 
+        cela nous donne toute sortes d'information, comme l'état de son réseau, l'état de ses téléphone, etc... En ce qui concerne les demandes de changement
+        ou ajout dans la configuration, le traitement est assez rapide car nous savons où aller directement, afin de répondre au besoins du client. `
+
+        image_detail5.src = `IMG/realisation/professionnel/ticket/telephonie/resolution_ticket.png`
+        titre_detail5.innerHTML = `La <span class="mot_important">résolution</span> du ticket`
+        paragraphe_detail5.innerHTML = `Une fois le problème résolu nous envoyons un message au client pour lui informer que la panne est résolu.
+        Il est également courant d'appeler directement le client afin de faire des tests pour s'assurer que tout est de nouveau opérationnel, 
+        dans ce cas nous envoyons tout de même un message afin d'avoir une trace écrite en cas de mauvaise fois de la part du client`
+
+
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
+
+        telechargement.innerHTML = ``
+    }
+
+    if (arg === 'projet_install_fibre') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
+        titre_projet_detail.innerHTML = `Installation d'un lien Fibre`
+
+        image_detail.src = `IMG/realisation/professionnel/intervention/outlook.png`
+        titre_detail.innerHTML = `Planification`
+        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+        image_detail2.src = `IMG/realisation/professionnel/intervention/provisionnig.png`
+        titre_detail2.innerHTML = `Provisionning`
+        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
+        évolutions
+        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
+        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
+        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
+        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
+        d’évaluer l’impact sur l’environnement et l’organisation.`
+
+        image_detail3.style.display = 'none'
+        image_detail4.style.display = 'none'
+        image_detail5.style.display = 'none'
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail3.style.display = 'none'
+        titre_detail4.style.display = 'none'
+        titre_detail5.style.display = 'none'
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail3.style.display = 'none'
+        paragraphe_detail4.style.display = 'none'
+        paragraphe_detail5.style.display = 'none'
         paragraphe_detail6.style.display = 'none'
         paragraphe_detail7.style.display = 'none'
         paragraphe_detail8.style.display = 'none'
