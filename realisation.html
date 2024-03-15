@@ -112,7 +112,7 @@
     <a class="page">
         <h1 class="mot-page">Page <br><span class="mot_de">Des</span> Réalisations</h1>
     </a>
-    
+
     <div class="background-menu">
         <div class="titre">
             <div>
@@ -129,9 +129,10 @@
             <div class="menu-titre">
                 <li class="lien"><a href="entreprise.html"><i class="fa-solid fa-building" href="entreprise.html"></i>
                         Entreprise</a></li>
-                <li class="lien-mobile"><a href="entreprise.html"><i class="fa-solid fa-building" href="entreprise.html"></i></a>
+                <li class="lien-mobile"><a href="entreprise.html"><i class="fa-solid fa-building"
+                            href="entreprise.html"></i></a>
                 </li>
-    
+
             </div>
             <div class="menu-titre">
                 <li class="lien"><a href="realisation.html"><i class="fa-solid fa-pen-to-square"
@@ -142,13 +143,15 @@
             <div class="menu-titre">
                 <li class="lien"><a href="veille.html"><i class="fa-solid fa-lightbulb" href="veille.html"></i>
                         Veille</a></li>
-                <li class="lien-mobile"><a href="veille.html"><i class="fa-solid fa-lightbulb" href="veille.html"></i></a>
+                <li class="lien-mobile"><a href="veille.html"><i class="fa-solid fa-lightbulb"
+                            href="veille.html"></i></a>
                 </li>
             </div>
             <div class="menu-titre">
                 <li class="lien"><a href="bilan.html"><i class="fa-solid fa-chart-simple" href="bilan.html"></i>
                         Bilan</a></li>
-                <li class="lien-mobile"><a href="bilan.html"><i class="fa-solid fa-chart-simple" href="bilan.html"></i></a>
+                <li class="lien-mobile"><a href="bilan.html"><i class="fa-solid fa-chart-simple"
+                            href="bilan.html"></i></a>
                 </li>
             </div>
         </div>
@@ -163,8 +166,27 @@
     <img class="background-image" src="IMG/realisation.jpg">
 
     <div class="espace"></div>
-
-
+<div class="choix_realisation">
+    <div class="radio-inputs">
+        <label class="radio">
+            <input type="radio" name="radio" checked="">
+            <span class="name">Tout</span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="radio">
+            <span class="name">Scolaire</span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="radio">
+            <span class="name">Professionnel</span>
+        </label>
+    </div>
+    <select class="select_annee" id="anneeSelect" onchange="Selectannee(event)">
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+    </select>
+</div>
 
     <div class="affichage_realisation">
 
@@ -190,7 +212,7 @@
 
                     <div class="projet" class="projet_nozama" onclick="affiche_detail('projet_nozama')">
                         <p class="titre"><strong>Nozama</strong></p>
-                        <img id="img-realisation1" class="img-realisation" scr="IMG/realisation/nozama/logo_nozama.png" >
+                        <img id="img-realisation1" class="img-realisation" scr="IMG/realisation/nozama/logo_nozama.png">
                         <div class="date_note">
                             <span class="date">04/12/2023</span>
                             <span class="languages">languages :
@@ -218,7 +240,8 @@
 
                     <div class="projet" class="projet_croquette" onclick="affiche_detail('projet_croquette')">
                         <p class="titre"><strong>Team Croquette</strong></p>
-                        <img id="img-realisation3" class="img-realisation" src="IMG/realisation/teamcroquette/logo_teamcroquette_sans_fond_noir.png">
+                        <img id="img-realisation3" class="img-realisation"
+                            src="IMG/realisation/teamcroquette/logo_teamcroquette_sans_fond_noir.png">
                         <div class="date_note">
                             <span class="date">01/19/2023</span>
                             <span class="languages">languages :
@@ -247,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 

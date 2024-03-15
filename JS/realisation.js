@@ -172,13 +172,12 @@ function affiche_detail(arg) {
         
         image_detail2.src = `IMG/realisation/nozama/cahier_des_charges.png`
         titre_detail2.innerHTML = `Cahier des charges`
-        paragraphe_detail2.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
-        et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
+        paragraphe_detail2.innerHTML = `Voici le cahier des charges de notre projet, c'est ce document qui va nous guider afin de réaliser le design de l'application 
+        et la structure au niveau de la base de donnée et les liens entres chaques éléments`
 
         image_detail3.src = `IMG/realisation/nozama/cahier_technique.png`
         titre_detail3.innerHTML = `Cahier Technique`
-        paragraphe_detail3.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
-        et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
+        paragraphe_detail3.innerHTML = ``
 
 
 
@@ -535,120 +534,6 @@ function affiche_detail(arg) {
 
 
 
-    if (arg === 'projet_tinycar') {
-
-        image_detail.style.display = ''
-        image_detail2.style.display = ''
-        image_detail3.style.display = ''
-        image_detail4.style.display = ''
-        image_detail5.style.display = ''
-        image_detail6.style.display = ''
-        image_detail7.style.display = ''
-        image_detail8.style.display = ''
-
-        titre_detail.style.display = ''
-        titre_detail2.style.display = ''
-        titre_detail3.style.display = ''
-        titre_detail4.style.display = ''
-        titre_detail5.style.display = ''
-        titre_detail6.style.display = ''
-        titre_detail7.style.display = ''
-        titre_detail8.style.display = ''
-
-        paragraphe_detail.style.display = ''
-        paragraphe_detail2.style.display = ''
-        paragraphe_detail3.style.display = ''
-        paragraphe_detail4.style.display = ''
-        paragraphe_detail5.style.display = ''
-        paragraphe_detail6.style.display = ''
-        paragraphe_detail7.style.display = ''
-        paragraphe_detail8.style.display = ''
-
-        titre_projet_detail.innerHTML = `Tinycar`
-
-        liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
-        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 semaines</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="mot_speciaux class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
-        liste_competences.innerHTML = `<i class="fa-solid fa-check"></i> Pas disponible`
-
-        image_detail.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail.innerHTML = `titre`
-        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail2.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail2.innerHTML = `titre`
-        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail3.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail3.innerHTML = `titre`
-        paragraphe_detail3.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail4.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail4.innerHTML = `titre`
-        paragraphe_detail4.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail5.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail5.innerHTML = `titre`
-        paragraphe_detail5.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail6.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail6.innerHTML = `titre`
-        paragraphe_detail6.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail7.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail7.innerHTML = `titre`
-        paragraphe_detail7.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        image_detail8.src = `IMG/realisation/tinycar/tinycar.png`
-        titre_detail8.innerHTML = `titre`
-        paragraphe_detail8.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-
-        telechargement.innerHTML = ``
-    }
-
-
-
 
     if (arg === 'projet_ticket_reseau') {
 
@@ -688,14 +573,9 @@ function affiche_detail(arg) {
         <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
 
         image_detail.src = `IMG/realisation/professionnel/desk.jpg`
-        titre_detail.innerHTML = `titre`
-        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        titre_detail.innerHTML = `Zoho desk`
+        paragraphe_detail.innerHTML = `Afin de réaliser nos ticket nous utilisons la plateforme de ticketing Zoho Desk, elle nous permet de répondre au mieux au client 
+        stout en gardant une chronologie et une logique dans la résolution du ticket`
 
         image_detail2.src = `IMG/realisation/professionnel/ticket/creation_ticket.png`
         titre_detail2.innerHTML = `<span class="mot_important">Création</span> d'un ticket`
@@ -849,22 +729,10 @@ function affiche_detail(arg) {
 
         image_detail.src = `IMG/realisation/professionnel/conf_routeur/sophia.png`
         titre_detail.innerHTML = `Logiciel Metier`
-        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        paragraphe_detail.innerHTML = `Nous utilisons un logiciel métier qui s'appel Sophia, c'est ici que nous gerons tout nos client, c'est à dire leurs téléphonie, leurs lien d'accès, leurs Firewall, etc...`
         image_detail2.src = `IMG/realisation/professionnel/conf_routeur/winbox.png`
         titre_detail2.innerHTML = `Logiciel gestion Routeur`
-        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        paragraphe_detail2.innerHTML = `Afin de créer la configuration du routeur, nous utilisons le logiciel Winbox, nous allons pouvoir gérer tout les aspect du routeur, de la gestion du Wifi, aux ouvertures de ports.`
 
         image_detail3.style.display = 'none'
         image_detail4.style.display = 'none'
@@ -927,15 +795,9 @@ function affiche_detail(arg) {
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
         <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
 
-        image_detail.src = `IMG/realisation/professionnel/desk.jpg`
-        titre_detail.innerHTML = `titre`
-        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        titre_detail.innerHTML = `Zoho desk`
+        paragraphe_detail.innerHTML = `Afin de réaliser nos ticket nous utilisons la plateforme de ticketing Zoho Desk, elle nous permet de répondre au mieux au client 
+        stout en gardant une chronologie et une logique dans la résolution du ticket`
 
         image_detail2.src = `IMG/realisation/professionnel/ticket/creation_ticket.png`
         titre_detail2.innerHTML = `<span class="mot_important">Création</span> d'un ticket`

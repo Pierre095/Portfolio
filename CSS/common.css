@@ -349,7 +349,7 @@ a {
     top: 20px;
     --inactive-color: #a5a5a5;
     position: fixed;
-    z-index: 10;
+    z-index: 9;
     aspect-ratio: 292 / 142;
     height: em(30px);
     background-color: transparent;
