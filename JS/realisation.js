@@ -362,8 +362,7 @@ function affiche_detail(arg) {
         image_detail7.src = `IMG/realisation/teamcroquette/recherche.png`
         titre_detail7.innerHTML = `La Recherche`
         paragraphe_detail7.innerHTML = `Nous avons integrer une partie recherche afin de pouvoir ecrire le nom d'un pokémon le rechercher et pouvoir le mettre dans son équipe`
-
-        image_detail8.style.display = 'none'
+        image_detail8.src = `IMG/realisation/teamcroquette/code_API.png`
 
         titre_detail8.style.display = 'none'
 
