@@ -25,5 +25,36 @@ html{
     border-radius: 30px;
 }
 
+@media screen and (max-width: 765px) {
+    .bloc {
+        flex-direction: column;
+    }
+
+    .titre-paragraphe{
+        width : 90%;
+    }
+
+    .titre-paragraphe .titre{
+        text-align: center;
+    }
+
+    .img-entreprise{
+        width:100%;
+        border-radius: 20px;
+    }
+
+    #img-entreprise2{
+        display : none;
+    }
+
+    #img-entreprise4{
+        display : none;
+    }
+
+    #img-entreprise5{
+        display : none;
+    }
+}
+
 
 

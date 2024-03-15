@@ -219,3 +219,23 @@ html {
     display: none;
 }
 
+@media screen and (max-width: 765px) {
+    .article_details_show {
+        position: fixed;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);
+        padding: 20px;
+        height: 80%;
+        z-index: 10;
+        width : 83%;
+        margin : 3%;
+    }
+
+    .img_paragraphe_detail{
+        flex-wrap : wrap;
+    }
+
+    .img_paragraphe_detail .image{
+        width:100%;
+    }
+}

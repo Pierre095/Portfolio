@@ -52,11 +52,12 @@ function sortArticles(event) {
 
 
 function affiche_detail(arg) {
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflow = 'hidden';
     let image_detail = document.querySelector('.img_paragraphe_detail .image');
     let paragraphe_detail = document.querySelector('.img_paragraphe_detail .paragraphe');
     let titre_detail = document.querySelector('.titre_article_detail');
     let telechargement = document.querySelector('.article_details_hide .file');
-
 
     if (arg === 'article_1') {
         console.log('yes')
@@ -66,45 +67,53 @@ function affiche_detail(arg) {
         Les banques explorent une nouvelle technologie appelée blockchain, qui est comme un grand livre numérique sécurisé.
         Plutôt que de l'utiliser uniquement pour les cryptomonnaies, elles créent des jetons numériques pour représenter des choses comme des obligations 
         (sorte de prêts financiers).`
-        telechargement.innerHTML = `<a class="button" target="blank" href="https://www.bfmtv.com/crypto/blockchain/cryptomonnaies-societe-generale-emet-sa-premiere-obligation-verte-numerique-sur-ethereum_AV-202312040529.html"">Visiter le site</a>`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://www.bfmtv.com/crypto/blockchain/cryptomonnaies-societe-generale-emet-sa-premiere-obligation-verte-numerique-sur-ethereum_AV-202312040529.html">Voir l'article</a>`
 
     }
 
     if (arg === 'article_2') {
         console.log('yes')
-        titre_detail.innerHTML = `<a target="blink" href="https://journalducoin.com/nft/nft-et-environnement-demeler-le-vrai-du-faux/">NFT ET ENVIRONNEMENT : DÉMÊLER LE VRAI DU FAUX</a>`
+        titre_detail.innerHTML = `<p>NFT ET ENVIRONNEMENT : DÉMÊLER LE VRAI DU FAUX</p>`
         image_detail.src = `IMG/veille/image_article_2.png`
         paragraphe_detail.innerHTML = `En 2021, Joanie Lemercier a découvert l'empreinte carbone des NFT via des recherches personnelles et un article de Memo Akten. 
         Ce constat a donné naissance au mouvement Clean NFT, incitant à utiliser des consensus moins énergivores. Malgré la transition d'Ethereum vers la preuve d'enjeu en 
         septembre 2022, les préoccupations environnementales persistent dans l'industrie crypto et NFT.`
+        telechargement.innerHTML = `<a class="button" target="blink"  href="https://journalducoin.com/nft/nft-et-environnement-demeler-le-vrai-du-faux/">Voir l'article</a>`
+
     }
 
     if (arg === 'article_3') {
         console.log('yes')
-        titre_detail.innerHTML = `<a target="blink" href="https://fr.cryptonews.com/news/suncontract-nft-energie-solaire.htm">SunContract, le projet qui permet de transformer ses NFT en énergie solaire</a>`
+        titre_detail.innerHTML = `<p>SunContract, le projet qui permet de transformer ses NFT en énergie solaire</p>`
         image_detail.src = `IMG/veille/image_article_3.png`
         paragraphe_detail.innerHTML = `SunContract utilise la blockchain pour faciliter les échanges d'énergie solaire entre producteurs et consommateurs, 
         éliminant les intermédiaires. Débuté en Slovénie en 2015, il s'étend désormais à toute l'Europe. La plateforme va introduire les NFT, permettant la 
         tokenisation des panneaux solaires et offrant aux détenteurs une part des revenus. Son objectif est d'apporter de la liquidité à un marché en demande.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://fr.cryptonews.com/news/suncontract-nft-energie-solaire.htm">Voir l'article</a>`
+
     }
 
     if (arg === 'article_4') {
         console.log('yes')
-        titre_detail.innerHTML = `<a target="blink" href="https://www.radiofrance.fr/franceinter/projets-environnementaux-finances-par-des-cryptomonnaies-des-millions-d-euros-perdus-dans-la-nature-4183513">Projets environnementaux financés par des cryptomonnaies : où sont passés les millions d'euros ?</a>`
+        titre_detail.innerHTML = `<p>Projets environnementaux financés par des cryptomonnaies : où sont passés les millions d'euros ?</p>`
         image_detail.src = `IMG/veille/image_article_4.png`
         paragraphe_detail.innerHTML = `Des investisseurs envisagent de porter plainte pour "escroquerie" contre une start-up qui promettait des investissements environnementaux 
         et sociaux via des cryptomonnaies. Seuls trois projets ont été concrétisés sur les nombreux annoncés, laissant les investisseurs insatisfaits. La start-up, désormais Erable, 
         refuse de répondre aux accusations et met en avant les projets réalisés, malgré les doutes sur ses méthodes et l'absence de transparence quant à l'utilisation des fonds.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://www.radiofrance.fr/franceinter/projets-environnementaux-finances-par-des-cryptomonnaies-des-millions-d-euros-perdus-dans-la-nature-4183513">Voir l'article</a>`
+
     }
 
     if (arg === 'article_5') {
         console.log('yes')
-        titre_detail.innerHTML = `<a target="blink" href="https://trustmyscience.com/demande-electricite-centres-donnees-double-2026-ia/">La demande d’électricité des centres de données devrait doubler d’ici 2026</a>`
+        titre_detail.innerHTML = `<p>La demande d’électricité des centres de données devrait doubler d’ici 2026</p>`
         image_detail.src = `IMG/veille/image_article_5.png`
         paragraphe_detail.innerHTML = `La demande croissante en électricité due aux centres de données, à l'IA et aux cryptomonnaies nécessite des solutions pour réduire l'impact 
         environnemental, comme l'efficacité énergétique et l'utilisation des énergies renouvelables. Cependant, des politiques énergétiques adaptées sont également nécessaires pour 
         encadrer cette transition vers une consommation d'énergie plus durable et pour soutenir les efforts des gestionnaires de centres de données dans leur quête de solutions plus
         respectueuses de l'environnement.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://trustmyscience.com/demande-electricite-centres-donnees-double-2026-ia/">Voir l'article</a>`
+
     }
 
     if (arg === 'article_6') {
@@ -118,6 +127,8 @@ function affiche_detail(arg) {
         ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
         nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
         d’évaluer l’impact sur l’environnement et l’organisation.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="en_attente.html">Voir l'article</a>`
+
     }
 
 
@@ -133,6 +144,8 @@ function affiche_detail(arg) {
 }
 
 function retour() {
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflowY = 'auto';
     const clic_article = document.querySelector('.article_details_show');
     const fleche_retour = document.querySelector('.fleche_retour_show');
     clic_article.classList.add('article_details_hide');

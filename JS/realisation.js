@@ -12,8 +12,13 @@ setTimeout(() => {
 
 function affiche_detail(arg) {
 
-    let titre_projet_detail = document.querySelector('.titre_projet_detail');
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflow = 'hidden';
+    
+    
+    
 
+    let titre_projet_detail = document.querySelector('.titre_projet_detail');
     let liste_informations = document.querySelector('.detail_projet .informations .liste');
     let liste_competences = document.querySelector('.detail_projet .competences .liste');
     let telechargement = document.querySelector('.projet_details_hide .file');
@@ -48,6 +53,33 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_sokoban') {
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Sokoban`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
@@ -71,26 +103,57 @@ function affiche_detail(arg) {
         titre_detail3.innerHTML = `Format de la Billeterie`
         paragraphe_detail3.innerHTML = `Voici donc le format de la billeterie, la demande des stations est simplifier afin de faciliter la saisi pour l'utilisateur, 
         et à la fin on affiche le détail du billet de metro, à noter qu'il s'agit d'une vrai ligne de metro au japon, et des vrais tarifs et zones tarifaire.`
-        image_detail4.src = ``
-        titre_detail4.innerHTML = ``
-        paragraphe_detail4.innerHTML = ``
-        image_detail5.src = ``
-        titre_detail5.innerHTML = ``
-        paragraphe_detail5.innerHTML = ``
-        image_detail6.src = ``
-        titre_detail6.innerHTML = ``
-        paragraphe_detail6.innerHTML = ``
-        image_detail7.src = ``
-        titre_detail7.innerHTML = ``
-        paragraphe_detail7.innerHTML = ``
-        image_detail8.src = ``
-        titre_detail8.innerHTML = ``
-        paragraphe_detail8.innerHTML = ``
+        
+        image_detail4.style.display = 'none'
+        image_detail5.style.display = 'none'
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail4.style.display = 'none'
+        titre_detail5.style.display = 'none'
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail4.style.display = 'none'
+        paragraphe_detail5.style.display = 'none'
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
 
         telechargement.innerHTML = `<a class="button" target="blink" href="index_jeu.html">Jouer a Sokoban</a>`
     }
 
     if (arg === 'projet_nozama') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `NOZAMA`
 
 
@@ -103,28 +166,31 @@ function affiche_detail(arg) {
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
         et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
-        image_detail2.src = ``
-        titre_detail2.innerHTML = ``
-        paragraphe_detail2.innerHTML = ``
-        image_detail3.src = ``
-        titre_detail3.innerHTML = ``
-        paragraphe_detail3.innerHTML = ``
-        image_detail4.src = ``
-        titre_detail4.innerHTML = ``
-        paragraphe_detail4.innerHTML = ``
-        image_detail5.src = ``
-        titre_detail5.innerHTML = ``
-        paragraphe_detail5.innerHTML = ``
-        image_detail6.src = ``
-        titre_detail6.innerHTML = ``
-        paragraphe_detail6.innerHTML = ``
-        image_detail7.src = ``
-        titre_detail7.innerHTML = ``
-        paragraphe_detail7.innerHTML = ``
-        image_detail8.src = ``
-        titre_detail8.innerHTML = ``
-        paragraphe_detail8.innerHTML = ``
-        telechargement.innerHTML = ``
+
+
+        image_detail2.style.display = 'none'
+        image_detail3.style.display = 'none'
+        image_detail4.style.display = 'none'
+        image_detail5.style.display = 'none'
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail2.style.display = 'none'
+        titre_detail3.style.display = 'none'
+        titre_detail4.style.display = 'none'
+        titre_detail5.style.display = 'none'
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail2.style.display = 'none'
+        paragraphe_detail3.style.display = 'none'
+        paragraphe_detail4.style.display = 'none'
+        paragraphe_detail5.style.display = 'none'
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
     }
 
 
@@ -133,6 +199,34 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_RTC') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Rugby Tropical Cup`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
@@ -197,6 +291,34 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_croquette') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Team Croquette`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-people-group"></i> Projet fait en <span class="mot_speciaux">Équipe</span> de <span class="mot_speciaux">3</span></li>
@@ -231,9 +353,12 @@ function affiche_detail(arg) {
         image_detail7.src = `IMG/realisation/teamcroquette/recherche.png`
         titre_detail7.innerHTML = `La Recherche`
         paragraphe_detail7.innerHTML = `Nous avons integrer une partie recherche afin de pouvoir ecrire le nom d'un pokémon le rechercher et pouvoir le mettre dans son équipe`
-        image_detail8.src = ``
-        titre_detail8.innerHTML = ``
-        paragraphe_detail8.innerHTML = ``
+
+        image_detail8.style.display = 'none'
+
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail8.style.display = 'none'
 
         telechargement.innerHTML = ``
     }
@@ -244,6 +369,34 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_adventure') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Text adventure`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
@@ -274,15 +427,18 @@ function affiche_detail(arg) {
         titre_detail5.innerHTML = `Une des <span class="mot_page_typing">fonctions</span>`
         paragraphe_detail5.innerHTML = `Voici une des <span class="mot_important">fonctions</span> présente dans le jeu, celle-ci permet d'aller a la <span class="mot_speciaux">cantine</span> afin de 
         récuperer des <span class="mot_speciaux">Points de Vie</span>, il y a un système de <span class="mot_speciaux">stock</span> de nourriture, qui diminue au fur et a mesure que l'on <span class="mot_speciaux">mange</span>`
-        image_detail6.src = ``
-        titre_detail6.innerHTML = ``
-        paragraphe_detail6.innerHTML = ``
-        image_detail7.src = ``
-        titre_detail7.innerHTML = ``
-        paragraphe_detail7.innerHTML = ``
-        image_detail8.src = ``
-        titre_detail8.innerHTML = ``
-        paragraphe_detail8.innerHTML = ``
+        
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
 
         telechargement.innerHTML = `<a class="button" target="blink" href="IMG/realisation/textadventure/textadventure.py">Jouez à Textadventure</a>`
     }
@@ -293,6 +449,34 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_billeterie') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Billeterie de Fukuokakuko`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
@@ -314,21 +498,24 @@ function affiche_detail(arg) {
         titre_detail3.innerHTML = `Format de la Billeterie`
         paragraphe_detail3.innerHTML = `Voici donc le format de la billeterie, la demande des stations est simplifier afin de faciliter la saisi pour l'utilisateur, 
         et à la fin on affiche le détail du billet de metro, à noter qu'il s'agit d'une vrai ligne de metro au japon, et des vrais tarifs et zones tarifaire.`
-        image_detail4.src = ``
-        titre_detail4.innerHTML = ``
-        paragraphe_detail4.innerHTML = ``
-        image_detail5.src = ``
-        titre_detail5.innerHTML = ``
-        paragraphe_detail5.innerHTML = ``
-        image_detail6.src = ``
-        titre_detail6.innerHTML = ``
-        paragraphe_detail6.innerHTML = ``
-        image_detail7.src = ``
-        titre_detail7.innerHTML = ``
-        paragraphe_detail7.innerHTML = ``
-        image_detail8.src = ``
-        titre_detail8.innerHTML = ``
-        paragraphe_detail8.innerHTML = ``
+
+        image_detail4.style.display = 'none'
+        image_detail5.style.display = 'none'
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+        titre_detail4.style.display = 'none'
+        titre_detail5.style.display = 'none'
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail4.style.display = 'none'
+        paragraphe_detail5.style.display = 'none'
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
 
         telechargement.innerHTML = `<a class="button" target="blink" href="IMG/realisation/billeterie/billetterie.py">Télécharger la billeterie</a>`
     }
@@ -339,6 +526,34 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_tinycar') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Tinycar`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
@@ -426,6 +641,34 @@ function affiche_detail(arg) {
 
 
     if (arg === 'projet_ticket') {
+
+        image_detail.style.display = ''
+        image_detail2.style.display = ''
+        image_detail3.style.display = ''
+        image_detail4.style.display = ''
+        image_detail5.style.display = ''
+        image_detail6.style.display = ''
+        image_detail7.style.display = ''
+        image_detail8.style.display = ''
+
+        titre_detail.style.display = ''
+        titre_detail2.style.display = ''
+        titre_detail3.style.display = ''
+        titre_detail4.style.display = ''
+        titre_detail5.style.display = ''
+        titre_detail6.style.display = ''
+        titre_detail7.style.display = ''
+        titre_detail8.style.display = ''
+
+        paragraphe_detail.style.display = ''
+        paragraphe_detail2.style.display = ''
+        paragraphe_detail3.style.display = ''
+        paragraphe_detail4.style.display = ''
+        paragraphe_detail5.style.display = ''
+        paragraphe_detail6.style.display = ''
+        paragraphe_detail7.style.display = ''
+        paragraphe_detail8.style.display = ''
+
         titre_projet_detail.innerHTML = `Résolution d'un ticket`
 
         liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">X</span>...</li>
@@ -463,15 +706,19 @@ function affiche_detail(arg) {
         paragraphe_detail5.innerHTML = `Une fois le problème résolu nous envoyons un message au client pour lui informer que la panne est résolu.
         Il est également courant d'appeler directement le client afin de faire des tests pour s'assurer que tout est de nouveau opérationnel, 
         dans ce cas nous envoyons tout de même un message afin d'avoir une trace écrite en cas de mauvaise fois de la part du client`
-        image_detail6.src = ``
-        titre_detail6.innerHTML = ``
-        paragraphe_detail6.innerHTML = ``
-        image_detail7.src = ``
-        titre_detail7.innerHTML = ``
-        paragraphe_detail7.innerHTML = ``
-        image_detail8.src = ``
-        titre_detail8.innerHTML = ``
-        paragraphe_detail8.innerHTML = ``
+
+        image_detail6.style.display = 'none'
+        image_detail7.style.display = 'none'
+        image_detail8.style.display = 'none'
+
+
+        titre_detail6.style.display = 'none'
+        titre_detail7.style.display = 'none'
+        titre_detail8.style.display = 'none'
+
+        paragraphe_detail6.style.display = 'none'
+        paragraphe_detail7.style.display = 'none'
+        paragraphe_detail8.style.display = 'none'
 
         telechargement.innerHTML = ``
     }
@@ -489,10 +736,14 @@ function affiche_detail(arg) {
 }
 
 function retour() {
+    const noscroll = document.querySelector('html');
+    noscroll.style.overflowY = 'auto';
     const clic_projet = document.querySelector('.projet_details_show');
     const fleche_retour = document.querySelector('.fleche_retour_show');
     clic_projet.classList.add('projet_details_hide');
     clic_projet.classList.remove('projet_details_show');
     fleche_retour.classList.add('fleche_retour_hide');
     fleche_retour.classList.remove('fleche_retour_show');
+
+
 }
