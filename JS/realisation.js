@@ -785,6 +785,7 @@ function affiche_detail(arg) {
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
         <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
 
+        image_detail.src = `IMG/realisation/professionnel/desk.jpg`
         titre_detail.innerHTML = `Zoho desk`
         paragraphe_detail.innerHTML = `Afin de réaliser nos ticket nous utilisons la plateforme de ticketing Zoho Desk, elle nous permet de répondre au mieux au client 
         stout en gardant une chronologie et une logique dans la résolution du ticket`
