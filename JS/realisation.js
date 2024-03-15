@@ -655,22 +655,13 @@ function affiche_detail(arg) {
 
         image_detail.src = `IMG/realisation/professionnel/conf_firewall/sophia.png`
         titre_detail.innerHTML = `Logiciel Metier`
-        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        paragraphe_detail.innerHTML = `Nous utilisons un logiciel métier qui s'appel Sophia, c'est ici que nous gerons tout nos client, c'est à 
+        dire leurs téléphonie, leurs lien d'accès, leurs Firewall, etc...`
+
         image_detail2.src = `IMG/realisation/professionnel/conf_firewall/firewall.png`
         titre_detail2.innerHTML = `Logiciel gestion Firewall`
-        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        paragraphe_detail2.innerHTML = `Afin de créer la configuration d'un Firewall, nous utilisons le logiciel Fortinet, nous allons pouvoir les paramètre du Firewall, notament les redirections.`
+
 
         image_detail3.style.display = 'none'
         image_detail4.style.display = 'none'
@@ -877,22 +868,13 @@ function affiche_detail(arg) {
 
         image_detail.src = `IMG/realisation/professionnel/intervention/outlook.png`
         titre_detail.innerHTML = `Planification`
-        paragraphe_detail.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        paragraphe_detail.innerHTML = `La plagnification de chaque intervention est gérer sur le calendrier Outlook, c'est ici que l'on voit nos disponibilités, 
+        lorsque nous sommes plannifié nous avons une notification et sur le planning nous avons tout les détails de l'intervention. `
         image_detail2.src = `IMG/realisation/professionnel/intervention/provisionnig.png`
         titre_detail2.innerHTML = `Provisionning`
-        paragraphe_detail2.innerHTML = `La realisation technologique, élément de la realisation stratégique, consiste à surrealisationr les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La realisation technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
+        paragraphe_detail2.innerHTML = `Avant de partir en intervention pour une installation, nous essayons de savoir a l'avance la configuration initial du client, 
+        afin de préparer le routeur fibre, pour qu'une fois arrivé chez le client nous ayons plus qu'à installer l'équipement et faire quelques modifications supplémentaire en 
+        fonction des préférences du client.`
 
         image_detail3.style.display = 'none'
         image_detail4.style.display = 'none'
