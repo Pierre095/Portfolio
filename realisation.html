@@ -191,13 +191,11 @@
     <div class="affichage_realisation">
 
         <div class="projet_annee">
-            <h1 class="titre_annee">Voici mes Projets de <span class="mot_page_typing">Deuxième</span> Année de BTS
-                <span class="mot_page_typing">SIO</span>
-            </h1>
+
             <div class="scolaire-pro">
-                <h1 class="titre_annee"><span class="mot_page_typing">Scolaire :</span></h1>
+
                 <div class="projet-list">
-                    <div class="projet" class="projet_projet_sokoban" onclick="affiche_detail('projet_sokoban')">
+                    <div class="projet" class="projet_projet_sokoban" id="scolaire" onclick="affiche_detail('projet_sokoban')">
                         <a id="cameclc" class="titre"><strong>Sokoban</strong></a>
                         <img id="img-realisation0" class="img-realisation" src="IMG/realisation/sokoban/PJ.gif">
                         <div class="date_note">
@@ -210,7 +208,7 @@
                         </div>
                     </div>
 
-                    <div class="projet" class="projet_nozama" onclick="affiche_detail('projet_nozama')">
+                    <div class="projet" class="projet_nozama" id="scolaire" onclick="affiche_detail('projet_nozama')">
                         <p class="titre"><strong>Nozama</strong></p>
                         <img id="img-realisation1" class="img-realisation" scr="IMG/realisation/nozama/logo_nozama.png">
                         <div class="date_note">
@@ -224,7 +222,7 @@
                         </div>
                     </div>
 
-                    <div class="projet" class="projet_RTC" onclick="affiche_detail('projet_RTC')">
+                    <div class="projet" class="projet_RTC" id="scolaire" onclick="affiche_detail('projet_RTC')">
                         <p class="titre"><strong>Rugby Tropical Cup</strong></p>
                         <img class="img-realisation" src="IMG/realisation/rugby/rugby.png">
                         <div class="date_note">
@@ -238,7 +236,7 @@
                         </div>
                     </div>
 
-                    <div class="projet" class="projet_croquette" onclick="affiche_detail('projet_croquette')">
+                    <div class="projet" class="projet_croquette" id="scolaire" onclick="affiche_detail('projet_croquette')">
                         <p class="titre"><strong>Team Croquette</strong></p>
                         <img id="img-realisation3" class="img-realisation"
                             src="IMG/realisation/teamcroquette/logo_teamcroquette_sans_fond_noir.png">
@@ -255,15 +253,14 @@
                 </div>
             </div>
             <div class="scolaire-pro">
-                <h1 class="titre_annee"><span class="mot_page_typing">Professionnel :</span></h1>
                 <div class="projet-list">
-                    <div class="projet" class="projet_ticket" onclick="affiche_detail('projet_ticket_reseau')">
+                    <div class="projet" class="projet_ticket" id="professionnel" onclick="affiche_detail('projet_ticket_reseau')">
                         <p class="titre"><strong>Résolution d'un ticket réseau</strong></p>
                         <img class="img-realisation" src="IMG/realisation/professionnel/desk.jpg">
                         <div class="date_note">
                         </div>
                     </div>
-                    <div class="projet" class="projet_ticket" onclick="affiche_detail('projet_conf_firewall')">
+                    <div class="projet" class="projet_ticket" id="professionnel" onclick="affiche_detail('projet_conf_firewall')">
                         <p class="titre"><strong>Configuration d'un Firewall</strong></p>
                         <img class="img-realisation" src="IMG/realisation/professionnel/conf_firewall/fortinet.png">
                         <div class="date_note">
@@ -275,13 +272,9 @@
         </div>
 
         <div class="projet_annee">
-            <h1 class="titre_annee">Voici mes Projets de <span class="mot_page_typing">Première</span> Année de BTS
-                <span class="mot_page_typing">SIO</span>
-            </h1>
             <div class="scolaire-pro">
-                <h1 class="titre_annee"><span class="mot_page_typing">Scolaire :</span></h1>
                 <div class="projet-list">
-                    <div class="projet" class="projet_adventure" onclick="affiche_detail('projet_adventure')">
+                    <div class="projet" class="projet_adventure" id="scolaire" onclick="affiche_detail('projet_adventure')">
                         <p class="titre"><strong>Text Adventure</strong></p>
                         <img class="img-realisation" src="IMG/realisation/textadventure/textadventure.png">
                         <div class="date_note">
@@ -291,7 +284,7 @@
                         </div>
                     </div>
 
-                    <div class="projet" class="projet_billeterie" onclick="affiche_detail('projet_billeterie')">
+                    <div class="projet" class="projet_billeterie" id="scolaire" onclick="affiche_detail('projet_billeterie')">
                         <p class="titre"><strong>Billeterie Metro Fukuokakuko</strong></p>
                         <img class="img-realisation" src="IMG/realisation/billeterie/billeterie.png">
                         <div class="date_note">
@@ -315,21 +308,20 @@
                 </div>
             </div>
             <div class="scolaire-pro">
-                <h1 class="titre_annee"><span class="mot_page_typing">Professionnel :</span></h1>
                 <div class="projet-list">
-                    <div class="projet" class="projet_ticket" onclick="affiche_detail('projet_conf_routeur')">
+                    <div class="projet" class="projet_ticket" id="professionnel" onclick="affiche_detail('projet_conf_routeur')">
                         <p class="titre"><strong>Configuration d'un routeur</strong></p>
                         <img class="img-realisation" src="IMG/realisation/professionnel/conf_routeur/winbox_logo.png">
                         <div class="date_note">
                         </div>
                     </div>
-                    <div class="projet" class="projet_ticket" onclick="affiche_detail('projet_ticket_telephonie')">
+                    <div class="projet" class="projet_ticket" id="professionnel" onclick="affiche_detail('projet_ticket_telephonie')">
                         <p class="titre"><strong>Résolution d'un ticket de téléphonie</strong></p>
                         <img class="img-realisation" src="IMG/realisation/professionnel/desk.jpg">
                         <div class="date_note">
                         </div>
                     </div>
-                    <div class="projet" class="projet_ticket" onclick="affiche_detail('projet_install_fibre')">
+                    <div class="projet" class="projet_ticket" id="professionnel" onclick="affiche_detail('projet_install_fibre')">
                         <p class="titre"><strong>Installation lien fibre</strong></p>
                         <img class="img-realisation" src="IMG/realisation/professionnel/intervention/sewan.png">
                         <div class="date_note">

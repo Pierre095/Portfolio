@@ -87,7 +87,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span>(en cours)</li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="lien_button" target="blank" href="https://github.com/Pierre095"> git hub</a></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" target="blank" href="https://github.com/Pierre095">git hub</a></li>
         <li><i class="fa-solid fa-globe"></i> Destiné à tout type d'<span class="mot_speciaux">utilisateur</span></li>`
         
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Approfondissement en<span class="mot_speciaux"> JavaScript</span></li>`
@@ -242,7 +242,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095">git hub</a></li>`
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Autonomie</li>
         <li><i class="fa-solid fa-check"></i> Création d'<span class="mot_speciaux">API</span></li>`
 
@@ -334,7 +334,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-people-group"></i> Projet fait en <span class="mot_speciaux">Équipe</span> de <span class="mot_speciaux">3</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
-        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur<a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES"> git lab</a></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Travail en <span class="mot_speciaux">Équipe<span class="mot_speciaux"></li>
         <li><i class="fa-solid fa-check"></i> Gestion d'une <span class="mot_speciaux">API<span class="mot_speciaux"></li>`
 
@@ -411,7 +411,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Découverte des <span class="mot_speciaux">boucles</span> (if else, for, while)</li>
         <li><i class="fa-solid fa-check"></i> Gestion de <span class="mot_speciaux">fonctions</span></li>`
 
@@ -491,7 +491,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 semaines</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur<a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095"> git hub</a></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
         liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Calcul avec des <span class="mot_speciaux">variables</span></li>
         <li><i class="fa-solid fa-check"></i> Organisation d'un <span class="mot_speciaux">code</span></li>`
 
