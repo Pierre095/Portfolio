@@ -6,12 +6,17 @@ const boxSize = 100; // Ajustement pour l'exemple, ajustez selon la taille de vo
 key_game_check = false;
 end = false;
 map_count = 1;
+right = true;
+left = false;
+start = false;
+moov_trap = 0;
+trap_switch = true;
 
 const moveLimits = {
     map1: 23,//23
-    map2: 20,//24
-    map3: 25,//32
-    map4: 21,//23
+    map2: 24,//24
+    map3: 32,//32
+    map4: 23,//23
     map5: 23,//23
     map6: 40,//43
     map7: 32,//32
@@ -27,6 +32,7 @@ let key_game = [] // 4
 let door = [] // 5
 let finish = [] // 6
 let mob = [] // 7
+let trap = [] // 8
 
 
 const map = [
@@ -59,9 +65,9 @@ const map2 = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 0, 0, 0, 0, 1, 1, 1, 1],
-    [1, 1, 7, 1, 0, 0, 0, 0, 1, 1],
-    [1, 0, 0, 1, 1, 2, 2, 2, 1, 1],
-    [1, 0, 0, 1, 1, 0, 0, 0, 1, 1],
+    [1, 1, 7, 1, 8, 8, 0, 0, 1, 1],
+    [1, 0, 8, 1, 1, 2, 2, 2, 1, 1],
+    [1, 0, 0, 1, 1, 0, 8, 0, 1, 1],
     [1, 3, 0, 1, 1, 6, 7, 0, 1, 1],
     [1, 1, 1, 1, 1, 1, 0, 7, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -72,10 +78,10 @@ const map3 = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 0, 0, 0, 0, 6, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 5, 1, 1],
-    [1, 1, 1, 0, 0, 0, 0, 0, 3, 1],
-    [1, 1, 1, 0, 1, 0, 1, 0, 0, 1],
-    [1, 1, 1, 0, 0, 7, 0, 0, 0, 1],
-    [1, 4, 1, 0, 1, 0, 1, 0, 1, 1],
+    [1, 1, 1, 0, 8, 8, 0, 0, 3, 1],
+    [1, 1, 1, 8, 1, 8, 1, 0, 0, 1],
+    [1, 1, 1, 0, 0, 7, 8, 8, 0, 1],
+    [1, 4, 1, 8, 1, 8, 1, 0, 1, 1],
     [1, 0, 0, 0, 0, 0, 7, 0, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -85,7 +91,7 @@ const map4 = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 3, 1, 4, 0, 2, 1, 1, 1, 1],
-    [1, 0, 2, 0, 2, 0, 5, 0, 1, 1],
+    [1, 0, 2, 8, 2, 0, 5, 0, 1, 1],
     [1, 2, 0, 2, 0, 2, 2, 6, 0, 1],
     [1, 0, 2, 0, 2, 0, 2, 2, 0, 1],
     [1, 1, 0, 2, 0, 2, 0, 1, 1, 1],
@@ -98,10 +104,10 @@ const map5 = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 6, 0, 1, 1, 1],
     [1, 1, 1, 1, 0, 5, 2, 0, 1, 1],
-    [1, 1, 3, 1, 0, 0, 2, 0, 1, 1],
-    [1, 1, 0, 1, 0, 0, 0, 0, 1, 1],
+    [1, 1, 3, 1, 8, 0, 2, 0, 1, 1],
+    [1, 1, 0, 1, 0, 8, 0, 8, 1, 1],
     [1, 1, 7, 1, 2, 2, 2, 2, 1, 1],
-    [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
+    [1, 1, 8, 0, 8, 0, 0, 8, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 4, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -116,7 +122,7 @@ const map6 = [
     [1, 1, 7, 1, 2, 2, 0, 0, 1, 1],
     [1, 1, 0, 0, 2, 0, 7, 1, 1, 1],
     [1, 1, 1, 1, 1, 5, 2, 0, 1, 1],
-    [1, 1, 1, 1, 1, 6, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1, 6, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 
@@ -147,10 +153,10 @@ const map8 = [
 ];
 
 const maptest = [
-    [1, 0, 7, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 0, 1, 1, 1, 1, 1, 1, 1],
-    [3, 0, 0, 2, 6, 1, 1, 1, 1, 1],
-    [0, 2, 7, 4, 5, 0, 0, 1, 1, 1],
+    [1, 0, 7, 1, 1, 1, 1, 1, 1, 1],
+    [3, 0, 8, 2, 6, 1, 1, 1, 1, 1],
+    [0, 0, 7, 4, 5, 0, 0, 1, 1, 1],
     [1, 2, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -165,29 +171,38 @@ canvas.height = map.length * boxSize;
 
 const image_personnage_1 = new Image();
 const image_personnage_2 = new Image();
+const image_personnage_1_gauche = new Image();
+const image_personnage_2_gauche = new Image();
 const image_obstacle = new Image();
 const image_personnage_coup = new Image();
+const image_personnage_coup_gauche = new Image();
 const image_key = new Image();
 const image_door = new Image();
 const image_finish = new Image();
 const image_mob = new Image();
 const image_mob_dead = new Image();
+const image_trap = new Image();
 
 image_personnage_1.src = "Sokoban/IMG/ASSET/PJ1.png";
 image_personnage_2.src = "Sokoban/IMG/ASSET/PJ2.png";
 image_personnage_coup.src = "Sokoban/IMG/ASSET/PJ_coup.png";
+image_personnage_1_gauche.src = "Sokoban/IMG/ASSET/PJ1_gauche.png";
+image_personnage_2_gauche.src = "Sokoban/IMG/ASSET/PJ2_gauche.png";
+image_personnage_coup_gauche.src = "Sokoban/IMG/ASSET/PJ_coup_gauche.png";
 image_obstacle.src = "Sokoban/IMG/ASSET/bloc.png";
 image_key.src = "Sokoban/IMG/ASSET/key.png"
 image_door.src = "Sokoban/IMG/ASSET/door.png"
 image_finish.src = "Sokoban/IMG/ASSET/finish.png"
 image_mob.src = "Sokoban/IMG/ASSET/mob.png"
 image_mob_dead.src = "Sokoban/IMG/ASSET/mob_dead.png"
+image_trap.src = "Sokoban/IMG/ASSET/piege.png";
 
 
 
 //Animation personnage (statique / push)
 let currentCharacterImage = image_personnage_1;
 let pushing = false;
+let pushing_check = false;
 if (pushing === false) {
     setInterval(() => {
         currentCharacterImage = (currentCharacterImage === image_personnage_1) ? image_personnage_2 : image_personnage_1;
@@ -196,6 +211,19 @@ if (pushing === false) {
 } else if (pushing === true) {
     setInterval(() => {
         currentCharacterImage = image_personnage_coup;
+        draw();
+    }, 250); // 
+}
+
+let currentCharacterImage_gauche = image_personnage_1_gauche;
+if (pushing === false) {
+    setInterval(() => {
+        currentCharacterImage_gauche = (currentCharacterImage_gauche === image_personnage_1_gauche) ? image_personnage_2_gauche : image_personnage_1_gauche;
+        draw();
+    }, 500);
+} else if (pushing === true) {
+    setInterval(() => {
+        currentCharacterImage_gauche = image_personnage_coup_gauche;
         draw();
     }, 250); // 
 }
@@ -211,6 +239,7 @@ function generateObstacles(map) {
     door = [];
     finish = [];
     mob = [];
+    trap = [];
 
     for (let row = 0; row < map.length; row++) {
         for (let col = 0; col < map[row].length; col++) {
@@ -228,11 +257,17 @@ function generateObstacles(map) {
                 finish.push({ x: col * boxSize, y: row * boxSize });
             } else if (map[row][col] === 7) { // Mob
                 mob.push({ x: col * boxSize, y: row * boxSize });
+            } else if (map[row][col] === 8) { // Trap
+                trap.push({ x: col * boxSize, y: row * boxSize });
             }
         }
     }
     initializeMoveCount();
+    moov_trap = 0;
+
 }
+
+
 
 document.addEventListener("keydown", moov);
 let d;
@@ -254,6 +289,7 @@ function moov(event) {
         d = "RIGHT";
         validMove = true;
     }
+    SwitchTrap();
 
     if (validMove) {
         movePlayer(d); // Déplacer le joueur seulement si une touche valide est pressée
@@ -261,6 +297,7 @@ function moov(event) {
 
     if (key == 82) { //permet de réinitialiser la map
         key_game_check = false;
+        trap_switch = true;
         if (map_count === 1) {
             setTimeout(() => {
                 generateObstacles(map1);
@@ -268,7 +305,7 @@ function moov(event) {
         } else if (map_count === 2) {
             setTimeout(() => {
                 generateObstacles(map2);
-            },10);
+            }, 10);
         } else if (map_count === 3) {
             setTimeout(() => {
                 generateObstacles(map3);
@@ -298,13 +335,12 @@ function moov(event) {
 
     updateMoveCountDisplay();
     moveCount();
-
-    // console.log(move_count);
 }
 
 function movePlayer() {
     let dx = 0;
     let dy = 0;
+
 
     switch (d) {
         case "UP":
@@ -321,11 +357,9 @@ function movePlayer() {
             break;
     }
 
+    start = true;
 
-    // if (move_count <= 0) {
-    //     alert("Dommage ! Vous avez dépassé le nombre de mouvements autorisés. Recommencez !");
-    //     // Vous pouvez ici réinitialiser le niveau ou effectuer d'autres actions nécessaires
-    // }
+
 
 
 
@@ -339,7 +373,7 @@ function movePlayer() {
     let keyIndex = getKeyIndex(newX, newY);
     let mobIndex = getMobIndex(newX, newY);
     let finishIndex = getFinishIndex(newX, newY);
-
+    let trapIndex = getTrapIndex(newX, newY);
 
 
     if (finishIndex !== -1 && move_count !== 0) { //vérifie si la fin est réglementaire
@@ -384,6 +418,7 @@ function movePlayer() {
                     generateObstacles(map8);
                 }
                 move_count = 0;
+                moov_trap = 0;
                 initializeMoveCount();
                 // Ajoutez ici toute autre logique de victoire, comme recharger le jeu ou passer au niveau suivant
             }, 250);
@@ -401,18 +436,34 @@ function movePlayer() {
         key_game_check = true; // Le joueur a maintenant la clé
     }
 
+    if (trapIndex !== -1 && !isObstacleOnTrap(trap[trapIndex]) && trap_switch === true) {
+        move_count -= 1;
+        // Alternez l'état du piège, qu'il ait été actif ou non
+    }
+
     // Ouvrir la porte si le joueur a la clé
     if (doorIndex !== -1 && key_game_check === true) {
         move_count -= 1;
+        moov_trap += 1;
         door.splice(doorIndex, 1); // Supprime la porte de l'array
         PJ[0].x = newX; // Met à jour la position du joueur pour être sur la porte
         PJ[0].y = newY;
         key_game_check = false;
     } else if (mobIndex !== -1) {
         // Si un mob est présent, tentez de le pousser
+        trapIndex = getTrapIndex(PJ[0].x, PJ[0].y);
+        ontrap = trapIndex !== -1;
+
+        if (ontrap === true && trap_switch === true) {
+            move_count -= 1
+        }
+
         if (pushMob(mobIndex, dx, dy)) {
+
             move_count -= 1;
+            moov_trap += 1;
             pushing = true; // Le personnage pousse un mob
+            pushing_check = true
             if (pushing === true) {
                 setTimeout(() => {
                     pushing = false; // Arrêtez de montrer l'image de poussée
@@ -422,16 +473,16 @@ function movePlayer() {
         }
         // Si le mob ne peut pas être poussé, le joueur reste sur place (ne faites rien)
     } else if (newX >= 0 && newX < canvas.width && newY >= 0 && newY < canvas.height && obstacleIndexImmobile === -1 && doorIndex === -1) {
+
         if (obstacleIndex === -1) {
-            move_count -= 1;
             // Si aucun obstacle n'est sur le chemin, déplacez le joueur
             PJ[0].x = newX;
             PJ[0].y = newY;
         } else {
             // Tentative de pousser un obstacle
             if (pushObstacle(obstacleIndex, dx, dy)) {
-                move_count -= 1;
                 pushing = true; // Le personnage pousse un bloc
+                pushing_check = true;
                 if (pushing === true) {
                     setTimeout(() => {
                         pushing = false; // Arrêtez de montrer l'image de poussée
@@ -439,8 +490,8 @@ function movePlayer() {
                     }, 250); // Délai pour afficher l'image de poussée
                 }
             } else {//fait l'animation de pousser même si c'est pas possible
-                move_count -= 1;
                 pushing = true;
+                pushing_check = true;
                 if (pushing === true) {
                     setTimeout(() => {
                         pushing = false; // Arrêtez de montrer l'image de poussée
@@ -451,10 +502,31 @@ function movePlayer() {
             }
 
         }
+        trapIndex = getTrapIndex(PJ[0].x, PJ[0].y);
+        ontrap = trapIndex !== -1;
+        if (ontrap === true && pushing_check === true && trap_switch === true) {
+            move_count -= 2;
+            moov_trap += 1;
+        } else {
+            move_count -= 1;
+            moov_trap += 1;
+        }
     }
+    pushing_check = false;
+    console.log(moov_trap);
     draw(); // Redessinez l'état actuel du jeu
 }
 
+function SwitchTrap() {
+    if (moov_trap % 2 !== 0) {
+        trap_switch = false;
+        image_trap.src = "Sokoban/IMG/ASSET/nopiege.png";
+    } else {
+        trap_switch = true;
+        image_trap.src = "Sokoban/IMG/ASSET/piege.png";
+    }
+    console.log(trap_switch);
+}
 
 function getObstacleIndex(x, y) {
     for (let i = 0; i < obstacles.length; i++) {
@@ -504,6 +576,15 @@ function getFinishIndex(x, y) {
 function getMobIndex(x, y) {
     for (let i = 0; i < mob.length; i++) {
         if (mob[i].x === x && mob[i].y === y) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function getTrapIndex(x, y) {
+    for (let i = 0; i < trap.length; i++) {
+        if (trap[i].x === x && trap[i].y === y) {
             return i;
         }
     }
@@ -583,9 +664,31 @@ function isMobOnKey(keyPosition) {
     return false; // Aucun obstacle sur la clé
 }
 
+function isObstacleOnTrap(trapPosition) {
+    for (let i = 0; i < obstacles.length; i++) {
+        if (obstacles[i].x === trapPosition.x && obstacles[i].y === trapPosition.y) {
+            return true; // Un obstacle est sur la clé
+        }
+    }
+    return false; // Aucun obstacle sur la clé
+}
+
+function isMobOnTrap(trapPosition) {
+    let newX = mob[index].x + dx;
+    let newY = mob[index].y + dy;
+
+    for (let i = 0; i < obstacles.length; i++) {
+        if (mob[i].x === trapPosition.x && obstacles[i].y === trapPosition.y && trap_switch === true) {
+            return true;
+            mob.splice(index, 1); // Un obstacle est sur la clé
+        }
+    }
+    return false; // Aucun obstacle sur la clé
+}
+
 function moveCount() {
     if (map_count === 1) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 23;
             initializeMoveCount()
@@ -594,7 +697,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 2) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 24;
             initializeMoveCount()
@@ -603,7 +706,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 3) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 32;
             initializeMoveCount()
@@ -612,7 +715,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 4) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 23;
             initializeMoveCount()
@@ -621,7 +724,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 5) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 23;
             initializeMoveCount()
@@ -630,7 +733,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 6) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 43;
             initializeMoveCount()
@@ -639,7 +742,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 7) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 32;
             initializeMoveCount()
@@ -648,7 +751,7 @@ function moveCount() {
             }, 250);
         }
     } else if (map_count === 8) {
-        if (move_count === -1) {
+        if (move_count <= -1) {
             alert("Dommage ! Recommence !");
             move_count = 33;
             initializeMoveCount()
@@ -674,6 +777,7 @@ function updateMoveCountDisplay() {
 
 
 function draw() {
+
     context.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < obstacles.length; i++) {
@@ -701,23 +805,79 @@ function draw() {
         context.drawImage(image_mob, mob[i].x, mob[i].y, boxSize, boxSize);
     }
 
-    if (PJ.length > 0 && pushing === false) {
+    for (let i = 0; i < trap.length; i++) {
+        context.drawImage(image_trap, trap[i].x, trap[i].y, boxSize, boxSize);
+    }
+
+    if (start === false) {
         context.drawImage(currentCharacterImage, PJ[0].x, PJ[0].y, boxSize, boxSize);
     }
-    const imageToDraw = pushing ? image_personnage_coup : currentCharacterImage;
-    context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    if (PJ.length > 0 && pushing === false && start === true) {
+        if (d === "RIGHT") {
+            context.drawImage(currentCharacterImage, PJ[0].x, PJ[0].y, boxSize, boxSize);
+            right = true;
+            left = false;
+        }
+        else if (d === "LEFT") {
+            context.drawImage(currentCharacterImage_gauche, PJ[0].x, PJ[0].y, boxSize, boxSize);
+            right = false;
+            left = true;
+        } else if (d === "UP" && right === true) {
+            context.drawImage(currentCharacterImage, PJ[0].x, PJ[0].y, boxSize, boxSize);
+            right = true;
+            left = false;
+        } else if (d === "UP" && left === true) {
+            context.drawImage(currentCharacterImage_gauche, PJ[0].x, PJ[0].y, boxSize, boxSize);
+            right = false;
+            left = true;
+        } else if (d === "DOWN" && right === true) {
+            context.drawImage(currentCharacterImage, PJ[0].x, PJ[0].y, boxSize, boxSize);
+            right = true;
+            left = false;
+        } else if (d === "DOWN" && left === true) {
+            context.drawImage(currentCharacterImage_gauche, PJ[0].x, PJ[0].y, boxSize, boxSize);
+            right = false;
+            left = true;
+        }
+
+    }
+    if (d === "RIGHT") {
+        const imageToDraw = pushing ? image_personnage_coup : currentCharacterImage;
+        context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    } else if (d === "LEFT") {
+        const imageToDraw = pushing ? image_personnage_coup_gauche : currentCharacterImage_gauche;
+        context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    } else if (d === "UP" && right === true) {
+        const imageToDraw = pushing ? image_personnage_coup : currentCharacterImage;
+        context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    } else if (d === "UP" && left === true) {
+        const imageToDraw = pushing ? image_personnage_coup_gauche : currentCharacterImage_gauche;
+        context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    } else if (d === "DOWN" && right === true) {
+        const imageToDraw = pushing ? image_personnage_coup : currentCharacterImage;
+        context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    } else if (d === "DOWN" && left === true) {
+        const imageToDraw = pushing ? image_personnage_coup_gauche : currentCharacterImage_gauche;
+        context.drawImage(imageToDraw, PJ[0].x, PJ[0].y, boxSize, boxSize);
+    }
+
+
+
 }
 
 Promise.all([
     new Promise(resolve => { image_personnage_1.onload = resolve; }),
     new Promise(resolve => { image_personnage_2.onload = resolve; }),
+    new Promise(resolve => { image_personnage_1_gauche.onload = resolve; }),
+    new Promise(resolve => { image_personnage_2_gauche.onload = resolve; }),
     new Promise(resolve => { image_obstacle.onload = resolve; }),
     new Promise(resolve => { image_personnage_coup.onload = resolve; }),
     new Promise(resolve => { image_key.onload = resolve; }),
     new Promise(resolve => { image_door.onload = resolve; }),
     new Promise(resolve => { image_finish.onload = resolve; }),
     new Promise(resolve => { image_mob.onload = resolve; }),
-    new Promise(resolve => { image_mob_dead.onload = resolve; })
+    new Promise(resolve => { image_mob_dead.onload = resolve; }),
+    new Promise(resolve => { image_trap.onload = resolve; })
 ]).then(() => {
     draw(); // Initialiser le dessin une fois que toutes les images sont chargées
 });
