@@ -420,7 +420,7 @@ function movePlayer() {
         // comme arrêter le jeu, afficher un écran de victoire, etc.
         // Par exemple, pour arrêter de déplacer le joueur après la victoire :
         end = true;
-        if (end === true && map_count === 9) {
+        if (end === true && map_count === 8) {
             setTimeout(() => {
                 alert("Félicitations ! Vous avez fini le jeu !");
                 const zone_jeu = document.querySelector('.zone_jeu');
