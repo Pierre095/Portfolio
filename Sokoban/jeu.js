@@ -19,7 +19,7 @@ const moveLimits = {
     map3: 32,//32
     map4: 23,//23
     map5: 23,//23
-    map6: 43,//43
+    map6: 40,//43
     map7: 32,//32
     map8: 33,//33
     // Ajoutez d'autres niveaux au besoin
@@ -197,7 +197,8 @@ image_door.src = "Sokoban/IMG/ASSET/door.png"
 image_finish.src = "Sokoban/IMG/ASSET/finish.png"
 image_mob.src = "Sokoban/IMG/ASSET/mob.png"
 image_mob_dead.src = "Sokoban/IMG/ASSET/mob_dead.png"
-image_trap.src = "Sokoban/IMG/ASSET/piege.png";
+image_trap.src = "Sokoban/IMG/ASSET/piege.png"
+image_notrap.src = "Sokoban/IMG/ASSET/nopiege.png"
 
 
 
@@ -262,11 +263,6 @@ function generateObstacles(map) {
             } else if (map[row][col] === 7) { // Mob
                 mob.push({ x: col * boxSize, y: row * boxSize });
             } else if (map[row][col] === 8) { // Trap
-                trap.push({ x: col * boxSize, y: row * boxSize });
-            } else if (map[row][col] === 9) { // Trap
-                trap.push({ x: col * boxSize, y: row * boxSize });
-            } else if (map[row][col] === 10) { // Trap
-                obstacles.push({ x: col * boxSize, y: row * boxSize });
                 trap.push({ x: col * boxSize, y: row * boxSize });
             }
         }
