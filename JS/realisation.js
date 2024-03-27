@@ -126,7 +126,7 @@ function affiche_detail(arg) {
         paragraphe_detail7.style.display = 'none'
         paragraphe_detail8.style.display = 'none'
 
-        telechargement.innerHTML = `<a class="button" target="blink" href="index_jeu.html">Jouer a Sokoban</a>`
+        telechargement.innerHTML = `<a class="button" target="blink" href="page_accueil_jeu.html">Jouer a Sokoban</a>`
     }
 
     if (arg === 'projet_nozama') {

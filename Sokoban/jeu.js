@@ -19,8 +19,8 @@ const moveLimits = {
     map3: 32,//32
     map4: 23,//23
     map5: 23,//23
-    map6: 43,//43
-    map7: 35,//32
+    map6: 40,//43
+    map7: 32,//32
     map8: 33,//33
     // Ajoutez d'autres niveaux au besoin
 };
@@ -264,11 +264,6 @@ function generateObstacles(map) {
                 mob.push({ x: col * boxSize, y: row * boxSize });
             } else if (map[row][col] === 8) { // Trap
                 trap.push({ x: col * boxSize, y: row * boxSize });
-            } else if (map[row][col] === 9) { // Trap
-                trap.push({ x: col * boxSize, y: row * boxSize });
-            } else if (map[row][col] === 10) { // Trap
-                trap.push({ x: col * boxSize, y: row * boxSize });
-                obstacles.push({ x: col * boxSize, y: row * boxSize });
             }
         }
     }
@@ -839,6 +834,14 @@ function draw() {
 
     context.clearRect(0, 0, canvas.width, canvas.height);
 
+    for (let i = 0; i < trap.length; i++) {
+        context.drawImage(image_trap, trap[i].x, trap[i].y, boxSize, boxSize);
+    }
+
+    for (let i = 0; i < key_game.length; i++) {
+        context.drawImage(image_key, key_game[i].x, key_game[i].y, boxSize, boxSize);
+    }
+
     for (let i = 0; i < obstacles.length; i++) {
         context.drawImage(image_obstacle, obstacles[i].x, obstacles[i].y, boxSize, boxSize);
     }
@@ -848,9 +851,6 @@ function draw() {
         context.fillRect(obstacles_immobiles[i].x, obstacles_immobiles[i].y, boxSize, boxSize);
     }
 
-    for (let i = 0; i < key_game.length; i++) {
-        context.drawImage(image_key, key_game[i].x, key_game[i].y, boxSize, boxSize);
-    }
 
     for (let i = 0; i < door.length; i++) {
         context.drawImage(image_door, door[i].x, door[i].y, boxSize, boxSize);
@@ -864,9 +864,6 @@ function draw() {
         context.drawImage(image_mob, mob[i].x, mob[i].y, boxSize, boxSize);
     }
 
-    for (let i = 0; i < trap.length; i++) {
-        context.drawImage(image_trap, trap[i].x, trap[i].y, boxSize, boxSize);
-    }
 
     if (start === false) {
         context.drawImage(currentCharacterImage, PJ[0].x, PJ[0].y, boxSize, boxSize);
@@ -946,17 +943,10 @@ Promise.all([
 // Assurez-vous que toutes les images sont chargées avant de dessiner
 
 function startGame() {
-    const zone_jeu = document.querySelector('.zone_jeu_hide');
-    const accueil = document.querySelector('.accueil');
-    const movecount = document.querySelector('.moveCount_hide');
-    zone_jeu.classList.remove('zone_jeu_hide');
-    zone_jeu.classList.add('zone_jeu');
-    accueil.classList.remove('accueil');
-    accueil.classList.add('accueil_hide');
-    movecount.classList.remove('moveCount_hide');
-    movecount.classList.add('moveCount');
     // Retire l'écran de démarrage et lance le jeu
     generateObstacles(map1); // Exemple de fonction qui pourrait être appelée pour initialiser le jeu
     draw(); // Redessine le canvas avec le jeu en cours
 
 }
+
+startGame();
