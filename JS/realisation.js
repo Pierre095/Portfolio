@@ -8,6 +8,51 @@ setTimeout(() => {
     textwriter()
 }, 500);
 
+trieAnnee({ target: { value: "2024" } })
+
+function trieAnnee(event) {
+    const selectedYear = event.target.value;
+    const realisationList = document.querySelectorAll(".projet");
+
+    realisationList.forEach(projet => {
+        if (projet.getAttribute('value') === selectedYear) {
+            projet.style.display = ''; // Afficher le projet
+        } else {
+            projet.style.display = 'none'; // Cacher le projet
+        }
+    });
+}
+
+document.getElementById('anneeSelect').addEventListener('change', trieAnnee);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Écouteur d'événements sur le sélecteur d'année
+    document.getElementById('anneeSelect').addEventListener('change', filterProjects);
+    // Écouteur d'événements sur chaque bouton radio pour la catégorie
+    document.querySelectorAll('input[name="radio"]').forEach(radio => 
+        radio.addEventListener('change', filterProjects));
+
+    function filterProjects() {
+        // Récupère l'année et la catégorie sélectionnées
+        const selectedYear = document.getElementById('anneeSelect').value;
+        const selectedCategory = document.querySelector('input[name="radio"]:checked').nextElementSibling.textContent.toLowerCase();
+
+        // Filtre les projets basés sur l'année et la catégorie
+        document.querySelectorAll('.projet').forEach(project => {
+            const projectYear = project.getAttribute('value');
+            const projectCategory = project.id;
+
+            // Vérifie si le projet doit être affiché selon les critères sélectionnés
+            if ((selectedYear === 'tout' || selectedYear === projectYear) &&
+                (selectedCategory === 'tout' || selectedCategory === projectCategory)) {
+                project.style.display = '';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    }
+});
+
 
 
 function affiche_detail(arg) {
@@ -16,9 +61,9 @@ function affiche_detail(arg) {
     noscroll.style.overflow = 'hidden';
 
 
-    
-    
-    
+
+
+
 
     let titre_projet_detail = document.querySelector('.titre_projet_detail');
     let liste_informations = document.querySelector('.detail_projet .informations .liste');
@@ -89,8 +134,12 @@ function affiche_detail(arg) {
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span>(en cours)</li>
         <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" target="blank" href="https://github.com/Pierre095">git hub</a></li>
         <li><i class="fa-solid fa-globe"></i> Destiné à tout type d'<span class="mot_speciaux">utilisateur</span></li>`
-        
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Approfondissement en<span class="mot_speciaux"> JavaScript</span></li>`
+
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Organiser son développement <span class="mot_speciaux">professionnel</span></li>
+        `
 
         image_detail.src = `IMG/realisation/sokoban/PJ.gif`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
@@ -107,7 +156,7 @@ function affiche_detail(arg) {
         titre_detail3.innerHTML = `Generation de la map`
         paragraphe_detail3.innerHTML = `Ici chaques numéro représente un élément particulier, par exmple le 3 représente le personnage, et le 6 le diamant. Avec cette méthode 
         la création de map devient beaucoup plus simple`
-        
+
         image_detail4.style.display = 'none'
         image_detail5.style.display = 'none'
         image_detail6.style.display = 'none'
@@ -165,13 +214,18 @@ function affiche_detail(arg) {
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
         <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
         <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">entreprise de transport de colis</span></li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Autonomie</span></li>`
 
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Travailler en mode <span class="mot_speciaux">Projet</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Organiser son développement <span class="mot_speciaux">professionnel</span></li>
+        `
         image_detail.src = `IMG/realisation/nozama/logo_nozama_sans_fond_noir.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
         et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
-        
+
         image_detail2.src = `IMG/realisation/nozama/cahier_des_charges.png`
         titre_detail2.innerHTML = `Cahier des charges`
         paragraphe_detail2.innerHTML = `Voici le cahier des charges de notre projet, c'est ce document qui va nous guider afin de réaliser le design de l'application 
@@ -203,11 +257,6 @@ function affiche_detail(arg) {
 
         telechargement.innerHTML = ``
     }
-
-
-
-
-
 
     if (arg === 'projet_RTC') {
 
@@ -242,10 +291,14 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095">git hub</a></li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Autonomie</li>
-        <li><i class="fa-solid fa-check"></i> Création d'<span class="mot_speciaux">API</span></li>`
-
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095">git hub</a></li>
+        <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">clients et gérants d'un tournois de rugby</span></li>`
+        
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Développer la présence en <span class="mot_speciaux">ligne</span> de l'organisation</li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        `
         image_detail.src = `IMG/realisation/rugby/rugby.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet <span class="mot_important">Rugby Tropical Cup</span> est un <span class="mot_important">site internet</span> 
@@ -295,12 +348,6 @@ function affiche_detail(arg) {
         telechargement.innerHTML = ``
     }
 
-
-
-
-
-
-
     if (arg === 'projet_croquette') {
 
         image_detail.style.display = ''
@@ -334,10 +381,14 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-people-group"></i> Projet fait en <span class="mot_speciaux">Équipe</span> de <span class="mot_speciaux">3</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
-        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Travail en <span class="mot_speciaux">Équipe<span class="mot_speciaux"></li>
-        <li><i class="fa-solid fa-check"></i> Gestion d'une <span class="mot_speciaux">API<span class="mot_speciaux"></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
+        <li><i class="fa-solid fa-globe"></i> Destiné à tout type d'<span class="mot_speciaux">utilisateur</span></li>`
 
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Travailler en mode <span class="mot_speciaux">Projet</span></li>
+        <li><i class="fa-solid fa-check"></i> Organiser son développement <span class="mot_speciaux">professionnel</span></li>
+        `
         image_detail.src = `IMG/realisation/teamcroquette/logo_teamcroquette_sans_fond_noir.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet <span class="mot_important">Team Croquette,</span> à été réalisé avec deux camarades de classe, et moi-même. c'est un 
@@ -373,11 +424,6 @@ function affiche_detail(arg) {
         telechargement.innerHTML = ``
     }
 
-
-
-
-
-
     if (arg === 'projet_adventure') {
 
         image_detail.style.display = ''
@@ -411,10 +457,13 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Découverte des <span class="mot_speciaux">boucles</span> (if else, for, while)</li>
-        <li><i class="fa-solid fa-check"></i> Gestion de <span class="mot_speciaux">fonctions</span></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
+        <li><i class="fa-solid fa-globe"></i> Destiné à tout type d'<span class="mot_speciaux">utilisateur</span></li>`
 
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        `
         image_detail.src = `IMG/realisation/textadventure/textadventure.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet <span class="mot_important">textadventure</span>, consiste a faire un jeu <span class="mot_important">textuelle</span> dans l'univers de notre choix, qui doit retracer 
@@ -437,7 +486,7 @@ function affiche_detail(arg) {
         titre_detail5.innerHTML = `Une des <span class="mot_page_typing">fonctions</span>`
         paragraphe_detail5.innerHTML = `Voici une des <span class="mot_important">fonctions</span> présente dans le jeu, celle-ci permet d'aller a la <span class="mot_speciaux">cantine</span> afin de 
         récuperer des <span class="mot_speciaux">Points de Vie</span>, il y a un système de <span class="mot_speciaux">stock</span> de nourriture, qui diminue au fur et a mesure que l'on <span class="mot_speciaux">mange</span>`
-        
+
         image_detail6.style.display = 'none'
         image_detail7.style.display = 'none'
         image_detail8.style.display = 'none'
@@ -452,11 +501,6 @@ function affiche_detail(arg) {
 
         telechargement.innerHTML = `<a class="button" target="blink" href="IMG/realisation/textadventure/textadventure.py">Jouez à Textadventure</a>`
     }
-
-
-
-
-
 
     if (arg === 'projet_billeterie') {
 
@@ -491,10 +535,13 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 semaines</span></li>
-        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Calcul avec des <span class="mot_speciaux">variables</span></li>
-        <li><i class="fa-solid fa-check"></i> Organisation d'un <span class="mot_speciaux">code</span></li>`
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
+        <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">client d'une gare japonnaise</span></li>`
 
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        `
         image_detail.src = `IMG/realisation/billeterie/billeterie.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet <span class="mot_important">billeterie</span>, se situe au japon, elle consiste à demander à un utilisateur quel <span class="mot_important">trajet</span> il souhaite effectuer, pour cela nous demandons plusieurs informations 
@@ -532,10 +579,6 @@ function affiche_detail(arg) {
 
 
 
-
-
-
-
     if (arg === 'projet_ticket_reseau') {
 
         image_detail.style.display = ''
@@ -567,12 +610,14 @@ function affiche_detail(arg) {
 
         titre_projet_detail.innerHTML = `Résolution d'un ticket en réseau`
 
-        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">X</span>...</li>
-        <li>Nombre de ticket <span class="mot_speciaux">créé</span> par semaine : </li>
-        <li>Nombre de ticket <span class="mot_speciaux">fermé</span> par semaine : </li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
-        <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
-
+        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">1 - 2 jours</span></li>
+        <li>Nombre de tickets <span class="mot_speciaux">créés</span> par semaine : <span class="mot_speciaux">10 - 15</span></li>
+        <li>Nombre de tickets <span class="mot_speciaux">fermés</span> par semaine : <span class="mot_speciaux">10 - 15</span></li>`
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Répondre aux <span class="mot_speciaux">incidents</span>et aux <span class="mot_speciaux">demandes</span> d'<span class="mot_speciaux">assistance</span> et d'<span class="mot_speciaux">évolution</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        `
         image_detail.src = `IMG/realisation/professionnel/desk.jpg`
         titre_detail.innerHTML = `Zoho desk`
         paragraphe_detail.innerHTML = `Afin de réaliser nos ticket nous utilisons la plateforme de ticketing Zoho Desk, elle nous permet de répondre au mieux au client 
@@ -653,7 +698,13 @@ function affiche_detail(arg) {
         paragraphe_detail8.style.display = ''
 
         titre_projet_detail.innerHTML = `Configuration d'un Firewall`
-
+        
+        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">1 jours</span></li>
+        <li>Nombre de <span class="mot_speciaux">demandes</span> par semaine : <span class="mot_speciaux">1 - 2</span></li>`
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Répondre aux <span class="mot_speciaux">incidents</span>et aux <span class="mot_speciaux">demandes</span> d'<span class="mot_speciaux">assistance</span> et d'<span class="mot_speciaux">évolution</span></li>
+        `
         image_detail.src = `IMG/realisation/professionnel/conf_firewall/sophia.png`
         titre_detail.innerHTML = `Logiciel Metier`
         paragraphe_detail.innerHTML = `Nous utilisons un logiciel métier qui s'appel Sophia, c'est ici que nous gerons tout nos client, c'est à 
@@ -719,6 +770,13 @@ function affiche_detail(arg) {
 
         titre_projet_detail.innerHTML = `Configuration d'un routeur`
 
+        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">1 jours</span></li>
+        <li>Nombre de <span class="mot_speciaux">demandes</span> par semaine : <span class="mot_speciaux">5 - 10</span></li>`
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
+        <li><i class="fa-solid fa-check"></i> Répondre aux <span class="mot_speciaux">incidents</span>et aux <span class="mot_speciaux">demandes</span> d'<span class="mot_speciaux">assistance</span> et d'<span class="mot_speciaux">évolution</span></li>
+        `
+
         image_detail.src = `IMG/realisation/professionnel/conf_routeur/sophia.png`
         titre_detail.innerHTML = `Logiciel Metier`
         paragraphe_detail.innerHTML = `Nous utilisons un logiciel métier qui s'appel Sophia, c'est ici que nous gerons tout nos client, c'est à dire leurs téléphonie, leurs lien d'accès, leurs Firewall, etc...`
@@ -781,12 +839,13 @@ function affiche_detail(arg) {
 
         titre_projet_detail.innerHTML = `Résolution d'un ticket en téléphonie`
 
-        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">X</span>...</li>
-        <li>Nombre de ticket <span class="mot_speciaux">créé</span> par semaine : </li>
-        <li>Nombre de ticket <span class="mot_speciaux">fermé</span> par semaine : </li>`
-        liste_competences.innerHTML = `<li><i class="fa-solid fa-check"></i> Esprit d'<span class="mot_speciaux">analyse</span></li>
-        <li><i class="fa-solid fa-check"></i> <span class="mot_speciaux">Relation client</span></li>`
-
+        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">15 - 20</span></li>
+        <li>Nombre de tickets <span class="mot_speciaux">créés</span> par semaine : <span class="mot_speciaux">10 - 15</span></li>
+        <li>Nombre de tickets <span class="mot_speciaux">fermés</span> par semaine : <span class="mot_speciaux">10 - 15</span></li>`
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Répondre aux <span class="mot_speciaux">incidents</span>et aux <span class="mot_speciaux">demandes</span> d'<span class="mot_speciaux">assistance</span> et d'<span class="mot_speciaux">évolution</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        `
         image_detail.src = `IMG/realisation/professionnel/desk.jpg`
         titre_detail.innerHTML = `Zoho desk`
         paragraphe_detail.innerHTML = `Afin de réaliser nos ticket nous utilisons la plateforme de ticketing Zoho Desk, elle nous permet de répondre au mieux au client 
@@ -867,6 +926,14 @@ function affiche_detail(arg) {
         paragraphe_detail8.style.display = ''
 
         titre_projet_detail.innerHTML = `Installation d'un lien Fibre`
+
+        liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">1 jours</span></li>
+        <li>Nombre de <span class="mot_speciaux">demandes</span> par semaine : <span class="mot_speciaux">1 - 5</span></li>`
+        liste_competences.innerHTML = `
+        <li><i class="fa-solid fa-check"></i> Répondre aux <span class="mot_speciaux">incidents</span>et aux <span class="mot_speciaux">demandes</span> d'<span class="mot_speciaux">assistance</span> et d'<span class="mot_speciaux">évolution</span></li>
+        <li><i class="fa-solid fa-check"></i> Travailler en mode <span class="mot_speciaux">Projet</span></li>
+        <li><i class="fa-solid fa-check"></i> Mettre à disposition des <span class="mot_speciaux">utilisateur</span> un service <span class="mot_speciaux">informatique</span></li>
+        `
 
         image_detail.src = `IMG/realisation/professionnel/intervention/outlook.png`
         titre_detail.innerHTML = `Planification`

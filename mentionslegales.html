@@ -1,63 +1,168 @@
-Informations légales
-MENTIONS LEGALES :
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="icon" type="image/png" href="IMG/logo/Logo_fondnoir.png">
+    <script src="https://kit.fontawesome.com/acc6f5edeb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/mentionslegales.css">
+</head>
 
-Correspondant aux directives des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 concerçant la Confiance de l'économie numérique, dite L.C.E.N., nous informons les utilisateurs du site : pierrebouffies.fr Les infos ci-dessous :
-
-
-1. Données légales :
-
-Titulaire : Pierre Bouffies
-Adresse du propriétaire : 2 allée alexis chauvet - Marines
-
-Le Développeur du site internet : Bouffies Pierre
-Le Responsable de la publication est : Bouffies Pierre
-De quelle façon entrer en contact avec le Directeur de la publication : bouffies.pierre@gmail.com
-
-Le Réalisateur est : Bouffies Pierre
-Ou entrer en contact avec le Développeur : bouffies.pierre@gmail.com
-
-Hebergeur : OVH
-SAS au capital social de 10 174 560 Euros
-Immatriculation RCS Lille Métropole 424 761 419 00045
-Nomenclature APE 2620Z
-Num. de TVA : FR 22 424 761 419
-Siège Sociale de l'hébergeur : 2 rue Kellermann - 59100 Roubaix - France
-
-
-Les mentions ont été générées via le générateur de mentions légales
-
-2. Présentation :
-
-Tout internaute qui utilise le site : pierrebouffies.fr est considéré comme usageé du site internet.
-Le site bouffies.pierre@gmail.com regroupe plusieurs services, dans l'état, mis à disposition des utilisateur. Il est précisé que ces derniers doivent rester honnête et faire preuve de bonne foi tant envers les autres utilisateurs qu'envers le Développeur du site pierrebouffies.fr. Le site pierrebouffies.fr est mis à jour de façon régulière par Bouffies Pierre.
-Bouffies Pierre s'efforce d'indiqué sur le site web pierrebouffies.fr des informations les plus claires possibles (sous réserve de modifications apportées depuis leur mise en ligne), mais ne saurait affirmer l'exactitude, la complétude et l'actualité des informations répandu sur son site internet, qu'elles soient de son fait ou non. En répercussion, l'utilisateur reconnaît se servir des informations données sous sa responsabilité exclusive.
-
-
-3. Exigence d'accessibilité :
-
-Le site web pierrebouffies.fr est habituellement accessible aux usagés 24/7, sauf en cas de maintenance, programmée ou pas, pour les besoins de la maintenance ou en cas de force majeure. En cas d'impossibilité d'accès au service, pierrebouffies.fr s'engage à faire son maximum afin de rétablir l'accès au site internet et s'efforcera alors de communiquer au préalable aux utilisateurs informations de l'interruption. N'étant asservi qu'à une obligation de moyen, pierrebouffies.fr ne pourrait être designé comme responsable des dommages, peu importe la nature, résultant d'une indisponibilité du service
+<body class="background">
+    <a class="toggle-container">
+        <input class="toggle-input" type="checkbox" id="check" onclick="changeStatus()"></input>
+        <svg class="toggle" viewBox="0 0 292 142" xmlns="http://www.w3.org/2000/svg">
+            <path class="toggle-background"
+                d="M71 142C31.7878 142 0 110.212 0 71C0 31.7878 31.7878 0 71 0C110.212 0 119 30 146 30C173 30 182 0 221 0C260 0 292 31.7878 292 71C292 110.212 260.212 142 221 142C181.788 142 173 112 146 112C119 112 110.212 142 71 142Z" />
+            <rect class="toggle-icon on" x="64" y="39" width="12" height="64" rx="6" />
+            <path class="toggle-icon off" fill-rule="evenodd"
+                d="M221 91C232.046 91 241 82.0457 241 71C241 59.9543 232.046 51 221 51C209.954 51 201 59.9543 201 71C201 82.0457 209.954 91 221 91ZM221 103C238.673 103 253 88.6731 253 71C253 53.3269 238.673 39 221 39C203.327 39 189 53.3269 189 71C189 88.6731 203.327 103 221 103Z" />
+            <g filter="url('#goo')">
+                <rect class="toggle-circle-center" x="13" y="42" width="116" height="58" rx="29" fill="#fff" />
+                <rect class="toggle-circle left" x="14" y="14" width="114" height="114" rx="58" fill="#fff" />
+                <rect class="toggle-circle right" x="164" y="14" width="114" height="114" rx="58" fill="#fff" />
+            </g>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="goo" />
+            </filter>
+        </svg>
+    </a>
 
 
-4. Droit de propriété intellectuelle :
+    <div class="background-menu">
+        <div class="titre">
+            <div>
+                <a href="index.html"><img id="picture" class="logo" src="IMG/logo/logo_sans-fond-noir.png">
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-titre">
+                <li class="lien"><a href="index.html"><i class="fa-solid fa-house" href="index.html"></i> Accueil</a>
+                </li>
+                <li class="lien-mobile"><a href="index.html"><i class="fa-solid fa-house" href="index.html"></i></a>
+                </li>
+            </div>
+            <div class="menu-titre">
+                <li class="lien"><a href="entreprise.html"><i class="fa-solid fa-building" href="entreprise.html"></i>
+                        Entreprise</a></li>
+                <li class="lien-mobile"><a href="entreprise.html"><i class="fa-solid fa-building"
+                            href="entreprise.html"></i></a>
+                </li>
 
-Bouffies Pierre est le propriétaire unique de l'intégralité des droits de propriété intellectuelle ou détient les droits d'usage sur l'intégralité des éléments accessibles sur le site web, tant structurellement que sur les articles et textes, images, graphismes, icônes, bande sonore, logiciels…
-Toute reproduction totale ou partielle du site pierrebouffies.fr, représentation, modification, mis à jour totalement ou partiellement de l'un de ces éléments, quel que soit le moyen ou la technique utilisé, est formellementinterdite, sauf autorisation écrite préalable de Bouffies Pierre, responsable du site internet à l'email : bouffies.pierre@gmail.com, à défaut elle sera considérée comme constitutive d'une contrefaçon et passible de poursuite conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+            </div>
+            <div class="menu-titre">
+                <li class="lien"><a href="realisation.html"><i class="fa-solid fa-pen-to-square"
+                            href="realisation.html"></i> Réalisations</a></li>
+                <li class="lien-mobile"><a href="realisation.html"><i class="fa-solid fa-pen-to-square"
+                            href="realisation.html"></i></a></li>
+            </div>
+            <div class="menu-titre">
+                <li class="lien"><a href="veille.html"><i class="fa-solid fa-lightbulb" href="veille.html"></i>
+                        Veille</a></li>
+                <li class="lien-mobile"><a href="veille.html"><i class="fa-solid fa-lightbulb"
+                            href="veille.html"></i></a>
+                </li>
+            </div>
+            <div class="menu-titre">
+                <li class="lien"><a href="bilan.html"><i class="fa-solid fa-chart-simple" href="bilan.html"></i>
+                        Bilan</a></li>
+                <li class="lien-mobile"><a href="bilan.html"><i class="fa-solid fa-chart-simple"
+                            href="bilan.html"></i></a>
+                </li>
+            </div>
+        </div>
+    </div>
 
-Toute reproduction totale ou partielle du affichage, edition, mis à jour totale ou partielle de l'un quelconque de ces éléments, sans tenir compte du moyen ou le procédé utilisé, est strictementinterdite, excepté autorisation écrite préalable de Bouffies Pierre, directeur du site suivant à l'email : bouffies.pierre@gmail.com, à défaut elle sera désigné comme constitutive d'une contrefaçon et passible de poursuite d'après les dispositions des multiples articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+    <div class="espace" style="margin-top : 15%"></div>
+    <div class="mentions_legales">
+        <h2>Informations légales</h2> <br>
+        <br />
+        <p style="text-align:justify"><strong>1. Éditeur du site :</strong></p> <br>
+        <p style="text-align:justify">Titulaire : <strong>Pierre Bouffies</strong><br />
+            Adresse du propriétaire : <strong> 2 allée alexis chauvet - Marines</strong><br />
+            <br />
+            Le Développeur du site internet : <strong>Bouffies Pierre</strong><br />
+            Le Responsable de la publication est : <strong>Bouffies Pierre</strong><br />
+            De quelle façon entrer en contact avec le Directeur de la publication :
+            <strong>bouffies.pierre@gmail.com</strong><br />
+            <br />
+            Le Réalisateur est : <strong>Bouffies Pierre</strong><br />
+            Ou entrer en contact avec le Développeur : <strong><a
+                    href="mailto:bouffies.pierre@gmail.com?subject=Contact a partir des mentions légales via le site bouffiespierre.fr">bouffies.pierre@gmail.com</a></strong><br />
+            <br />
+        <p style="text-align:justify"></p>
+        <p style="text-align:justify"></p>
+        <br />
+        <p style="text-align:justify"><strong>2. Hébergeur & DNS :</strong></p> <br>
+        <p>
+            Hebergeur : OVH<br />
+            SAS au capital social de 10 174 560 Euros<br />
+            Immatriculation RCS Lille Métropole 424 761 419 00045<br />
+            Nomenclature APE 2620Z<br />
+            Num. de TVA : FR 22 424 761 419<br />
+            Siège Sociale de l'hébergeur : 2 rue Kellermann - 59100 Roubaix - France<br />
+            <br />
+            <br />
+        </p>
 
-5. Liens hypertextes et cookies :
+        <p style="text-align:justify"></p>
+        <br />
+        <p style="text-align:justify"><strong>3. Cookies et Technologies Similaires :</strong><br />
+            <br />
+            Ce site web utilise éventuellement des cookies et des technologies similaires pour améliorer l'expérience
+            des utilisateurs. Ces cookies peuvent inclure ceux utilisés par des services tiers tels que Google
+            Analytics. Les cookies peuvent être utilisés pour collecter des informations anonymes et agrégées sur la
+            manière dont les visiteurs utilisent le site, afin d'améliorer son contenu et son fonctionnement. Vous
+            pouvez ajuster les paramètres de votre navigateur pour gérer les cookies selon vos préférences.
+        </p>
+        <p style="text-align:justify"></p>
+        <br />
+        <p style="text-align:justify"><strong>4. Collecte de Données Personnelles :</strong><br />
+            <br />
+            Aucune donnée personnelle n'est collectée via ce site web, à moins que cela ne soit spécifiquement indiqué
+            dans un formulaire de contact ou dans un but précis. Toute information fournie via ces formulaires sera
+            traitée conformément à notre politique de confidentialité.
+        </p>
+        <p style="text-align:justify"><br />
+            <strong>5. Propriété Intellectuelle :</strong><br />
+            <br />
+            Tous les contenus présents sur ce site (textes, images, vidéos, etc.) sont protégés par le droit d'auteur et
+            autres lois relatives à la propriété intellectuelle. Toute utilisation non autorisée est strictement
+            interdite.
+        </p> <br>
+        <p style="text-align:justify"><br />
+            <strong>6. Liens Externes :</strong><br />
+            <br />
+            Ce site peut contenir des liens vers des sites externes. L'éditeur du site ne saurait être tenu responsable
+            des dommages directs ou indirects résultant de l'accès ou de l'utilisation de ce site web.
+        </p> <br>
+        <p style="text-align:justify"><br />
+            <strong>7. Modification des Mentions Légales :</strong><br />
+            <br />
+            L'éditeur du site se réserve le droit de modifier les présentes mentions légales à tout moment. Il est
+            conseillé de consulter cette page régulièrement pour rester informé des éventuelles modifications.
+        </p> <br>
+    </div>
+    <footer class="icon">
+        <div class="social-links">
+            <div class="gitlab">
+                <i><a class="fa-brands fa-gitlab fa-xl" href="https://gitlab.com/Pierre-BOUFFIES"
+                        target="_blank"></a></i>
+            </div>
 
-Le site suivant pierrebouffies.fr possède un certain nombre de URL cliquable vers d'autres sites (partenaires, informations etc) mis en ligne avec la validation de Bouffies Pierre . Cependant, Bouffies Pierre ne peut pas controler l'ensemble du contenu des différents sites consultés et décline donc l'entière responsabilité de de cette façon concernant les risques éventuels de contenus illicites.
-L'usager est donc averti que au cours de ses visites sur le site pierrebouffies.fr, un ou différents cookies sont capable de s'intégrer de façon automatique sur son via son logiciel de navigation. Un cookie est un ensemble de données informatique qui ne permettra pas de savoir qui est l'utilisateur, néanmoins qui sauvegarde des informations en lien avec la navigation de l'usager sur le site suivant. 
-Le paramétrage du programme de navigation tolère de renseigner de la présence de cookie et éventuellement, de contester de la procédure expliquée à l' adresse : www.pierrebouffies.fr. L'utilisateur peut néanmoins de régler le navigateur de son ordinateur afin de refuser la mise en place des cookies, sachant que le refus d'installation d'un cookie peut potentiellement entraîner l'impossibilité d'avoir accès à différents secteurs. Pour tout blocage de cookies, cherchez dans le moteur de recherche : blocage des cookies et suivez les instructions en rapport avec votre version de navigateur.
+            <div class="linkedin">
+                <i><a class="fa-brands fa-linkedin fa-xl" href="https://www.linkedin.com/in/pierre-bouffies-83b024235/"
+                        target="_blank"></a></i>
+            </div>
 
-6. Protection des personnes & biens - Utilisation des données personnelles :
-
-En France, les données personnelles sont par exemple protégées par la loi n° 78-87 du 6 janvier 1978 et la loi n° 2004-801 datant du 6 août 2004, l'article L. 226-13 du Code pénal ainsi que la Directive Européenne datant du 24 octobre 1995.
-Sur le site pierrebouffies.fr, Bouffies Pierre ne collecte pas d'informations personnelles ( suivant l'article 4 loi n°78-17 du 06 janvier 1978) relatives à l'utilisateur que pour le besoin de certains services proposés par le site interne pierrebouffies.fr. L'utilisateur fournit ces données en pleine conscience de cause, notamment lorsqu'il effectue de lui-même à la saisie. Il est alors détaillé à l'usagé du site web pierrebouffies.fr le devoir ou non de divulguer ces données.
-Conformément aux agencements des articles 38 et autres de la loi 78-17 du 6 janvier 1978 en lien avec l'informatique, les fichiers et aux libertés, n'importe quel utilisateur possède un droit d'accès aux informations, de rectification, de suppression et d'opposition aux informations personnelles le concernant. Pour l'utiliser, adressez votre demande à pierrebouffies.fr par email : bouffies.pierre@gmail.com ou alors via lettre manuscrite dûement signée, jointe d'une copie du titre d'identité avec signature du propriétaire de la pièce, en mentionnant l'adresse à laquelle la réponse doit être envoyée.
-
-Aucune information personnelle de l'utilisateur du site suivant pierrebouffies.fr n'est publiée à l'insu de l'utilisateur, échangée, transmise, cédée sur n'importe quel support à des groupes. Uniquement l'hypothèse de la vente du site web pierrebouffies.fr et de l'intégralité de ses droits autorise Bouffies Pierre à céder les informations personnelles à l' acquéreur qui serait alors à son tour tenu à la même obligation de conservation et de modification des informations vis à vis de l'utilisateur du site pierrebouffies.fr.
-Le site suivant pierrebouffies.fr est conforme avec le RGPD voir notre politique RGPD.
-
-Les bases de données sont sécurisées par les règles de la loi du 1er juillet 1998 transposant ainsi la directive 96/9 du 11 mars 1996 concernant la protection juridique des bases de données.
+            <div class="github">
+                <i><a class="fa-brands fa-github fa-xl" href="https://github.com/Pierre095" target="_blank"></a></i>
+            </div>
+        </div>
+    </footer>
+    <h4>Copyright ® 2023 Bouffies - <a href="mentionslegales.html">Tous droits réservés.</a></h4>
+    <script src="./JS/common.js"></script>
