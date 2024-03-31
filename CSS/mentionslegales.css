@@ -5,3 +5,14 @@
 .menu .menu-titre .lien-mobile a {
     color: rgb(0, 0, 0);
 }
+
+.mentions_legales {
+    background-color: rgb(230, 230, 230);
+    text-align: justify;
+    z-index: 1;
+    margin-right: 10%;
+    margin-left: 10%;
+    box-shadow: 3px 3px 3px 3px rgb(186, 186, 186);
+    border-radius: 20px;
+    padding: 60px;
+}
