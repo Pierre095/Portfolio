@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Écouteur d'événements sur le sélecteur d'année
     document.getElementById('anneeSelect').addEventListener('change', filterProjects);
     // Écouteur d'événements sur chaque bouton radio pour la catégorie
-    document.querySelectorAll('input[name="radio"]').forEach(radio => 
+    document.querySelectorAll('input[name="radio"]').forEach(radio =>
         radio.addEventListener('change', filterProjects));
 
     function filterProjects() {
@@ -131,7 +131,7 @@ function affiche_detail(arg) {
         titre_projet_detail.innerHTML = `Sokoban`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
-        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span>(en cours)</li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span> (en cours)</li>
         <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" target="blank" href="https://github.com/Pierre095">git hub</a></li>
         <li><i class="fa-solid fa-globe"></i> Destiné à tout type d'<span class="mot_speciaux">utilisateur</span></li>`
 
@@ -143,11 +143,10 @@ function affiche_detail(arg) {
 
         image_detail.src = `IMG/realisation/sokoban/PJ.gif`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
-        paragraphe_detail.innerHTML = `
-        Le projet Sokoban est un jeu de puzzle où le joueur doit pousser des blocs vers des emplacements cibles sur un plateau de jeu. Le jeu se caractérise par sa simplicité de 
-        conception mais offre un défi de réflexion profond. Le joueur contrôle un personnage dans un labyrinthe composé de murs, de blocs (ou caisses) et de destinations spécifiques
-        où les blocs doivent être placés. L'objectif est d'atteindre l'arrivé sans dépassé le nombre de coup autorisé'. Sokoban met l'accent 
-        sur la planification stratégique et la résolution de problèmes spatiaux, chaque niveau étant un puzzle statique avec une solution spécifique.`
+        paragraphe_detail.innerHTML = `Le projet Sokoban est un jeu de puzzle où le joueur doit pousser des blocs vers des emplacements cibles sur un plateau de jeu. Le jeu se caractérise par 
+        sa simplicité de conception mais offre un défi de réflexion profond. Le joueur contrôle un personnage dans un labyrinthe composé de murs, de blocs (ou caisses) et de destinations 
+        spécifiques où les blocs doivent être placés. L'objectif est d'atteindre l'arrivée sans dépasser le nombre de coups autorisés. Sokoban met l'accent sur la planification 
+        stratégique et la résolution de problèmes spatiaux, chaque niveau étant un puzzle statique avec une solution spécifique.`
         image_detail2.src = `IMG/realisation/sokoban/jeu.png`
         titre_detail2.innerHTML = `Présentation d'un niveau`
         paragraphe_detail2.innerHTML = `Dans ce premier niveau nous pouvons des blocs des squelettes et le diamant qui symbolise l'arrivé. chaque élément a une spécificité,
@@ -211,7 +210,7 @@ function affiche_detail(arg) {
 
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-user-group"></i> Projet fait à <span class="mot_speciaux">2</span></li>
-        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span></li>
+        <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span> (en cours)</li>
         <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
         <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">entreprise de transport de colis</span></li>`
 
@@ -293,7 +292,7 @@ function affiche_detail(arg) {
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
         <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095">git hub</a></li>
         <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">clients et gérants d'un tournois de rugby</span></li>`
-        
+
         liste_competences.innerHTML = `
         <li><i class="fa-solid fa-check"></i> Gérer le <span class="mot_speciaux">patrimoine Informatique</span></li>
         <li><i class="fa-solid fa-check"></i> Développer la présence en <span class="mot_speciaux">ligne</span> de l'organisation</li>
@@ -698,7 +697,7 @@ function affiche_detail(arg) {
         paragraphe_detail8.style.display = ''
 
         titre_projet_detail.innerHTML = `Configuration d'un Firewall`
-        
+
         liste_informations.innerHTML = `<li><span class="mot_speciaux">Temps</span> de résolution moyen : <span class="mot_speciaux">1 jours</span></li>
         <li>Nombre de <span class="mot_speciaux">demandes</span> par semaine : <span class="mot_speciaux">1 - 2</span></li>`
         liste_competences.innerHTML = `

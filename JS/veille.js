@@ -118,16 +118,11 @@ function affiche_detail(arg) {
 
     if (arg === 'article_6') {
         console.log('yes')
-        titre_detail.innerHTML = ``
-        image_detail.src = `IMG/veille/gif-veille.gif`
-        paragraphe_detail.innerHTML = `La veille technologique, élément de la veille stratégique, consiste à surveiller les
-        évolutions
-        techniques, les innovations dans un secteur d’activité donnée. La veille technologique comprend
-        notamment la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper
-        ou de s’informer sur des changements en matière de recherche, développement, brevet, lancement de
-        nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. Cela a pour but
-        d’évaluer l’impact sur l’environnement et l’organisation.`
-        telechargement.innerHTML = `<a class="button" target="blink" href="en_attente.html">Voir l'article</a>`
+        titre_detail.innerHTML = `Cryptomonnaies : comment elles redéfinissent la finance internationale`
+        image_detail.src = `IMG/veille/image_article_6.png`
+        paragraphe_detail.innerHTML = `Les cryptomonnaies transforment la finance mondiale en démocratisant l'accès aux marchés via la technologie blockchain, en introduisant des 
+        défis liés à la volatilité et à la consommation énergétique, et en nécessitant une régulation adaptée pour équilibrer innovation et sécurité.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://www.insoelite.com/actualites-economiques/cryptomonnaies-comment-elles-redefinissent-la-finance-internationale/">Voir l'article</a>`
 
     }
 
