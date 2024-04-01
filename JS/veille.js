@@ -57,6 +57,7 @@ function affiche_detail(arg) {
     let image_detail = document.querySelector('.img_paragraphe_detail .image');
     let paragraphe_detail = document.querySelector('.img_paragraphe_detail .paragraphe');
     let titre_detail = document.querySelector('.titre_article_detail');
+    let auteur = document.querySelector('.auteur');
     let telechargement = document.querySelector('.article_details_hide .file');
 
     if (arg === 'article_1') {
@@ -123,6 +124,37 @@ function affiche_detail(arg) {
         paragraphe_detail.innerHTML = `Les cryptomonnaies transforment la finance mondiale en démocratisant l'accès aux marchés via la technologie blockchain, en introduisant des 
         défis liés à la volatilité et à la consommation énergétique, et en nécessitant une régulation adaptée pour équilibrer innovation et sécurité.`
         telechargement.innerHTML = `<a class="button" target="blink" href="https://www.insoelite.com/actualites-economiques/cryptomonnaies-comment-elles-redefinissent-la-finance-internationale/">Voir l'article</a>`
+
+    }
+
+    if (arg === 'article_7') {
+        console.log('yes')
+        titre_detail.innerHTML = `CRYPTOMONNAIES DANS PARIS : LE POUBELLE COIN ET LE $RATP ENVAHISSENT LES JO 2024`
+        image_detail.src = `IMG/veille/image_article_7.png`
+        paragraphe_detail.innerHTML = `
+        Pour les Jeux Olympiques, la mairie de Paris enrichit l'usage du Poubelle Coin (PBL) et introduit l'application PBL Tracker, récompensant les recyclages et les retards dans 
+        les transports avec des avantages olympiques et des expériences uniques. Malgré des critiques, ces initiatives visent à lier sport, écologie, et citoyenneté.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://journalducoin.com/actualites/cryptomonnaies-paris-poubelle-coin-ratp-jo-2024/">Voir l'article</a>`
+
+    }
+
+    if (arg === 'article_8') {
+        console.log('yes')
+        titre_detail.innerHTML = `Bitcoiners et climatosceptiques seraient « interconnectés » selon Greenpeace – Analyse d'une conclusion erronée`
+        image_detail.src = `IMG/veille/image_article_8.png`
+        paragraphe_detail.innerHTML = `
+        Greenpeace critique le minage de Bitcoin pour son impact environnemental, mais néglige des arguments qui montrent ses bénéfices énergétiques et son utilisation croissante d'énergies renouvelables.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://cryptoast.fr/bitcoiners-climatosceptiques-seraient-interconnectes-selon-greenpeace-nalyse-conclusion-erronee/">Voir l'article</a>`
+
+    }
+
+    if (arg === 'article_9') {
+        console.log('yes')
+        titre_detail.innerHTML = `Cryptomonnaie Écologique : Exploration des Technologies Blockchain Durables`
+        image_detail.src = `IMG/veille/image_article_9.png`
+        paragraphe_detail.innerHTML = `L'industrie des cryptomonnaies évolue vers plus de durabilité avec des technologies comme la preuve d’enjeu (PoS), réduisant son impact écologique et 
+        attirant des investisseurs conscients des enjeux environnementaux.`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://www.237online.com/cryptomonnaie-ecologique-exploration-des-technologies-blockchain-durables/">Voir l'article</a>`
 
     }
 

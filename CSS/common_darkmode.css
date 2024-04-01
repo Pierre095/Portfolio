@@ -318,8 +318,10 @@
 
 
 /*bilan*/
-
-
+.conclusion{
+    background-color: rgb(40, 40, 40);
+    box-shadow: 3px 3px 3px 3px rgb(55, 55, 55);
+}
 
 
 

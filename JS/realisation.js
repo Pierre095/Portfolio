@@ -132,7 +132,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span> (en cours)</li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" target="blank" href="https://github.com/Pierre095">git hub</a></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095/BOUFFIES_github/tree/main/bouffies_pierre_sokoban" target="_blank"></a></i> Projet stocké sur <a class="lien_button" target="blank" href="https://github.com/Pierre095/BOUFFIES_github/tree/main/bouffies_pierre_sokoban">git hub</a></li>
         <li><i class="fa-solid fa-globe"></i> Destiné à tout type d'<span class="mot_speciaux">utilisateur</span></li>`
 
         liste_competences.innerHTML = `
@@ -174,7 +174,7 @@ function affiche_detail(arg) {
         paragraphe_detail7.style.display = 'none'
         paragraphe_detail8.style.display = 'none'
 
-        telechargement.innerHTML = `<a class="button" target="blink" href="page_accueil_jeu.html">Jouer a Sokoban</a>`
+        telechargement.innerHTML = `<a class="button" target="blink" href="index_jeu.html">Jouer a Sokoban</a>`
     }
 
     if (arg === 'projet_nozama') {
@@ -211,7 +211,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-user-group"></i> Projet fait à <span class="mot_speciaux">2</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span> (en cours)</li>
-        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
+        <li><i><a class="fa-brands fa-gitlab" href="https://gitlab.com/Pierre-BOUFFIES" target="_blank"></a></i> Projet stocké sur <a class="lien_button" target="blank" href="https://gitlab.com/Pierre-BOUFFIES">git lab</a></li>
         <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">entreprise de transport de colis</span></li>`
 
         liste_competences.innerHTML = `
@@ -290,7 +290,7 @@ function affiche_detail(arg) {
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait<span class="mot_speciaux"> seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">1 mois</span></li>
-        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095">git hub</a></li>
+        <li><i><a class="fa-brands fa-github" href="https://github.com/Pierre095/BOUFFIES_github/tree/main/bouffies_pierre_rugby" target="_blank"></a></i> Projet stocké sur <a class="lien_button" class="github" target="blank" href="https://github.com/Pierre095/BOUFFIES_github/tree/main/bouffies_pierre_rugby">git hub</a></li>
         <li><i class="fa-solid fa-warehouse"></i> Destiné à des <span class="mot_speciaux">clients et gérants d'un tournois de rugby</span></li>`
 
         liste_competences.innerHTML = `

@@ -203,6 +203,10 @@ html {
     text-align: justify;
 }
 
+.auteur{
+    margin-top : -5%;
+}
+
 .img_paragraphe_detail .image{
     position: relative;
     margin: 5%;

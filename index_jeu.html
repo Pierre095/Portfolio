@@ -8,25 +8,19 @@
     <title>HellTaker</title>
     <link rel="icon" type="image/png" href="IMG/logo/Logo_fondnoir.png">
     <script src="https://kit.fontawesome.com/acc6f5edeb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Sokoban/style.css">
+    <link rel="stylesheet" href="Sokoban/CSS/style.css">
 </head>
 
-    <header>
-        <h1 class="nom-jeu">
-            <a href="page_accueil_jeu.html">Diamond Master</a>
-        </h1>
+<body>
+    <h1 class="nom-jeu">
+        <a href="index_jeu.html">Diamond Master</a>
+    </h1>
+    <div class="accueil">
+        <a class="choix_accueil" href="jeu.html">Commencer le Jeu</a>
+        <a class="choix_accueil" href="jeu.html">Niveaux</a>
+        <a class="choix_accueil" href="login.html" id="choixCompte">Compte</a>
+
+    </div>
+</body>
     
-        <h1 class="nom-niveau">Niveau 1</h1>
-    </header>
-    
-    <body>
-        <div class="move-map-timer">
-            <div id="moveCount" class="moveCount">0</div>
-            <div class="zone_jeu">
-                <canvas></canvas>
-            </div>
-            <div id="timer" class="timer">00:00</div>
-        </div>
-    </body>
-    
-    <script src="Sokoban/jeu.js"></script>
+    <script src="Sokoban/JS/jeu.js"></script>
