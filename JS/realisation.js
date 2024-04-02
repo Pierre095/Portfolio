@@ -143,18 +143,20 @@ function affiche_detail(arg) {
 
         image_detail.src = `IMG/realisation/sokoban/PJ.gif`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
-        paragraphe_detail.innerHTML = `Le projet Sokoban est un jeu de puzzle où le joueur doit pousser des blocs vers des emplacements cibles sur un plateau de jeu. Le jeu se caractérise par 
-        sa simplicité de conception mais offre un défi de réflexion profond. Le joueur contrôle un personnage dans un labyrinthe composé de murs, de blocs (ou caisses) et de destinations 
-        spécifiques où les blocs doivent être placés. L'objectif est d'atteindre l'arrivée sans dépasser le nombre de coups autorisés. Sokoban met l'accent sur la planification 
-        stratégique et la résolution de problèmes spatiaux, chaque niveau étant un puzzle statique avec une solution spécifique.`
+        paragraphe_detail.innerHTML = `Le jeu que j'ai créer s'inspire principalement du jeu déjà existant HellTaker
+
+        Dans le jeu vous êtes un petit personnage qui doit atteindre un diamant, qui une fois récupérer vous fait passer au niveau suivant. Sur la route du diamant on pourra y retrouver 
+        quelques bloc, mobs, pièges, clé et porte qui ont tous un fonctionnalité particulière créant ainsi un labyrinthe dans lequel il faudra se frayer un chemin.
+        
+        Le personnage a un nombre de déplacement limité par niveau et un timer pour calculer le temps passer dans le niveau.`
         image_detail2.src = `IMG/realisation/sokoban/jeu.png`
         titre_detail2.innerHTML = `Présentation d'un niveau`
-        paragraphe_detail2.innerHTML = `Dans ce premier niveau nous pouvons des blocs des squelettes et le diamant qui symbolise l'arrivé. chaque élément a une spécificité,
+        paragraphe_detail2.innerHTML = `Dans ce premier niveau, nous pouvons des blocs des squelettes et le diamant qui symbolise l'arrivé. chaque élément a une spécificité,
         par exemple les blocs ne peuvent pas être déplacé si un autre élément est derrière`
         image_detail3.src = `IMG/realisation/sokoban/generation_map.png`
         titre_detail3.innerHTML = `Generation de la map`
         paragraphe_detail3.innerHTML = `Ici chaques numéro représente un élément particulier, par exmple le 3 représente le personnage, et le 6 le diamant. Avec cette méthode 
-        la création de map devient beaucoup plus simple`
+        la création de map devient beaucoup plus simple, et il y a simplement la reflexion de la création qui reste a faire.`
 
         image_detail4.style.display = 'none'
         image_detail5.style.display = 'none'
@@ -222,17 +224,17 @@ function affiche_detail(arg) {
         `
         image_detail.src = `IMG/realisation/nozama/logo_nozama_sans_fond_noir.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
-        paragraphe_detail.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness) pour qu'ils ne soient pas perdu,
+        paragraphe_detail.innerHTML = `Le projet Nozama, est une application métier permettant de gérer les colis des clients(buisness), pour qu'ils ne soient pas perdu,
         et/ou gerer les imprévus tel que des pertes, des vols, ou pour tout autres problèmes.`
 
         image_detail2.src = `IMG/realisation/nozama/cahier_des_charges.png`
         titre_detail2.innerHTML = `Cahier des charges`
         paragraphe_detail2.innerHTML = `Voici le cahier des charges de notre projet, c'est ce document qui va nous guider afin de réaliser le design de l'application 
-        et la structure au niveau de la base de donnée et les liens entres chaques éléments`
+        et la structure au niveau de la base de donnée et les liens entres chaques éléments.`
 
         image_detail3.src = `IMG/realisation/nozama/cahier_technique.png`
         titre_detail3.innerHTML = `Cahier Technique`
-        paragraphe_detail3.innerHTML = ``
+        paragraphe_detail3.innerHTML = `Voici notre cahier technique, qui représente toute la structure et l'organisation du projet en passant par la présentation du calendrier, et celle de la base de données.`
 
 
 
@@ -301,8 +303,8 @@ function affiche_detail(arg) {
         image_detail.src = `IMG/realisation/rugby/rugby.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet <span class="mot_important">Rugby Tropical Cup</span> est un <span class="mot_important">site internet</span> 
-        complété par deux pages <span class="mot_important">web mobile</span>. La plateforme recense les <span class="mot_important">matchs</span> de <span class="mot_important">rugby</span> et les informations concernant l'évenements
-        en lui même, les utilisateur avec un ticket ont la possibilité de les <span class="mot_important">scanner</span> pour accéder <span class="mot_speciaux">rapidement</span> aux détails spécifiques de chaque match, 
+        complété par trois pages <span class="mot_important">web, mobile, et scanneur</span>. La plateforme recense les <span class="mot_important">matchs</span> de <span class="mot_important">rugby</span> et les informations concernant l'évenement
+        en lui même, les utilisateurs avec un ticket ont la possibilité de les <span class="mot_important">scanner</span> pour accéder <span class="mot_speciaux">rapidement</span> aux détails spécifiques de chaque match, 
         comme les <span class="mot_speciaux">équipes</span>, les <span class="mot_speciaux">dates</span> et le <span class="mot_speciaux">stade</span>.`
 
         image_detail2.src = `IMG/realisation/rugby/view.png`
@@ -313,14 +315,14 @@ function affiche_detail(arg) {
 
         image_detail3.src = `IMG/realisation/rugby/json.png`
         titre_detail3.innerHTML = `Données <span class="mot_page_typing">Json</span>`
-        paragraphe_detail3.innerHTML = ` le <span class="mot_important">JSON</span> ressemble à une <span class="mot_important">liste</span> de choses, chaque chose ayant un 
+        paragraphe_detail3.innerHTML = ` le <span class="mot_important">JSON</span> ressemble à une <span class="mot_important">liste</span> d'éléments, chaque élément ayant un 
         <span class="mot_speciaux">nom</span> et une <span class="mot_speciaux">valeur</span> associée. C'est un moyen efficace pour les <span class="mot_important">applications</span>
-        de partager des données de manière <span class="mot_speciaux">lisible</span> et <span class="mot_speciaux">structurée</span>.`
+        de partager des données de manière <span class="mot_speciaux">lisibles</span> et <span class="mot_speciaux">structurées</span>.`
 
         image_detail4.src = `IMG/realisation/rugby/appel-API.png`
         titre_detail4.innerHTML = `L'appel <span class="mot_page_typing">API</span>`
         paragraphe_detail4.innerHTML = `un appel <span class="mot_important">API</span> est comme une conversation entre deux <span class="mot_speciaux">applications</span>, 
-        où l'une demande quelque chose et l'autre répond avec les <span class="mot_important">informations</span> demandées.`
+        où l'une envoi une requête et l'autre renvoi les <span class="mot_important">informations</span> demandées.`
 
         image_detail5.src = `IMG/realisation/rugby/bdd.png`
         titre_detail5.innerHTML = `Base de <span class="mot_page_typing">Données</span>`
@@ -398,22 +400,28 @@ function affiche_detail(arg) {
         son équipe.`
         image_detail2.src = `IMG/realisation/teamcroquette/charte_graphique.png`
         titre_detail2.innerHTML = `La Charte Graphique`
-        paragraphe_detail2.innerHTML = `Voici notre charte graphique que nous avons utiliser pour designer notre site`
+        paragraphe_detail2.innerHTML = `Voici notre charte graphique que nous avons utilisé pour designer notre site`
+
         image_detail3.src = `IMG/realisation/teamcroquette/diagramme_de_classe.png`
         titre_detail3.innerHTML = `Diagramme de Classe`
         paragraphe_detail3.innerHTML = `Voici Notre diagramme de Classe`
+
         image_detail4.src = `IMG/realisation/teamcroquette/site.png`
         titre_detail4.innerHTML = `La page <span class="mot_page_typing">principale</span>`
         paragraphe_detail4.innerHTML = `Ici Voici la page principale où l'on retrouve la liste de tout les pokémons`
+
         image_detail5.src = `IMG/realisation/teamcroquette/inscription.png`
         titre_detail5.innerHTML = `page d'Inscription`
         paragraphe_detail5.innerHTML = `Voici la page d'inscription, permettant de s'inscrire, et par la suite avoir accès à son compte avec les pokémon ajouter dans son équipe`
+
         image_detail6.src = `IMG/realisation/teamcroquette/connexion.png`
         titre_detail6.innerHTML = `Page de Connexion`
         paragraphe_detail6.innerHTML = `Voici la page de connexion, qui sert après avoir rempli la page d'inscription`
+
         image_detail7.src = `IMG/realisation/teamcroquette/recherche.png`
         titre_detail7.innerHTML = `La Recherche`
         paragraphe_detail7.innerHTML = `Nous avons integrer une partie recherche afin de pouvoir ecrire le nom d'un pokémon le rechercher et pouvoir le mettre dans son équipe`
+        
         image_detail8.src = `IMG/realisation/teamcroquette/code_API.png`
 
         titre_detail8.style.display = 'none'
