@@ -303,7 +303,7 @@ function affiche_detail(arg) {
         image_detail.src = `IMG/realisation/rugby/rugby.png`
         titre_detail.innerHTML = `Le <span class="mot_page_typing">projet</span> en quelques mots`
         paragraphe_detail.innerHTML = `Le projet <span class="mot_important">Rugby Tropical Cup</span> est un <span class="mot_important">site internet</span> 
-        complété par trois pages <span class="mot_important">web, mobile, et scanneur</span>. La plateforme recense les <span class="mot_important">matchs</span> de <span class="mot_important">rugby</span> et les informations concernant l'évenement
+        complété par trois applications <span class="mot_important">web, mobile, et scanneur</span>. La plateforme recense les <span class="mot_important">matchs</span> de <span class="mot_important">rugby</span> et les informations concernant l'évenement
         en lui même, les utilisateurs avec un ticket ont la possibilité de les <span class="mot_important">scanner</span> pour accéder <span class="mot_speciaux">rapidement</span> aux détails spécifiques de chaque match, 
         comme les <span class="mot_speciaux">équipes</span>, les <span class="mot_speciaux">dates</span> et le <span class="mot_speciaux">stade</span>.`
 
@@ -421,7 +421,7 @@ function affiche_detail(arg) {
         image_detail7.src = `IMG/realisation/teamcroquette/recherche.png`
         titre_detail7.innerHTML = `La Recherche`
         paragraphe_detail7.innerHTML = `Nous avons integrer une partie recherche afin de pouvoir ecrire le nom d'un pokémon le rechercher et pouvoir le mettre dans son équipe`
-        
+
         image_detail8.src = `IMG/realisation/teamcroquette/code_API.png`
 
         titre_detail8.style.display = 'none'
