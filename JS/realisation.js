@@ -8,7 +8,7 @@ setTimeout(() => {
     textwriter()
 }, 500);
 
-trieAnnee({ target: { value: "tout" } })
+trieAnnee({ target: { value: "2024" } })
 
 function trieAnnee(event) {
     const selectedYear = event.target.value;
