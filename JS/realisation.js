@@ -128,7 +128,7 @@ function affiche_detail(arg) {
         paragraphe_detail7.style.display = ''
         paragraphe_detail8.style.display = ''
 
-        titre_projet_detail.innerHTML = `Sokoban`
+        titre_projet_detail.innerHTML = `Diamond Master`
 
         liste_informations.innerHTML = `<li><i class="fa-solid fa-person"></i> Projet fait <span class="mot_speciaux">seul</span></li>
         <li><i class="fa-solid fa-calendar-days"></i> Durée : <span class="mot_speciaux">2 mois</span> (en cours)</li>
@@ -174,7 +174,7 @@ function affiche_detail(arg) {
         paragraphe_detail7.style.display = 'none'
         paragraphe_detail8.style.display = 'none'
 
-        telechargement.innerHTML = `<a class="button" target="blink" href="index_jeu.html">Jouer a Sokoban</a>`
+        telechargement.innerHTML = `<a class="button" target="blink" href="https://diamond-master.vercel.app/">Jouer a Sokoban</a>`
     }
 
     if (arg === 'projet_nozama') {
